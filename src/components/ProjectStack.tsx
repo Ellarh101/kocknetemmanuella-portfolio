@@ -33,11 +33,13 @@ export function ProjectStack() {
         const eased = enter * enter * (3 - 2 * enter);
         const translate = (1 - eased) * 105 - Math.min(depth, 3) * 2.2;
         const scale = 1 - Math.min(depth, 3) * 0.04;
-        const opacity = 1 - Math.min(depth, 3) * 0.16;
+        const opacity = Math.min(eased * 1.6, 1) * (1 - Math.min(depth, 3) * 0.16);
 
         el.style.transform = `translate3d(0, ${translate.toFixed(2)}%, 0) scale(${scale.toFixed(3)})`;
         el.style.opacity = opacity.toFixed(3);
+        el.style.visibility = eased <= 0.001 ? "hidden" : "visible";
         el.style.pointerEvents = enter > 0.5 && depth < 0.6 ? "auto" : "none";
+
       });
     };
 
