@@ -1,24 +1,78 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Navigation } from "@/components/Navigation";
+import { Hero } from "@/components/Hero";
+import { ProjectStack } from "@/components/ProjectStack";
+import { Skills } from "@/components/Skills";
+import { Timeline } from "@/components/Timeline";
+import { Certifications } from "@/components/Certifications";
+import { Contact } from "@/components/Contact";
+import { Reveal } from "@/components/Reveal";
+import { education, experience } from "@/data/site";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+const title = "Kocknet Emmanuella — Machine Learning Engineer";
+const description =
+  "Portfolio of Kocknet Emmanuella, a Machine Learning Engineer building intelligent systems from data to deployment.";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <>
+      <Navigation />
+      <main>
+        <Hero />
+
+        <section id="about" className="py-24 sm:py-32">
+          <div className="mx-auto max-w-6xl px-5 sm:px-8">
+            <Reveal>
+              <p className="eyebrow">About</p>
+            </Reveal>
+            <Reveal delay={80}>
+              <p className="mt-6 max-w-3xl text-lg leading-relaxed text-foreground/90 sm:text-2xl sm:leading-[1.5]">
+                I&rsquo;m a Machine Learning Engineer with a background in Mechatronics
+                Engineering. I build intelligent systems that connect machine learning
+                with real-world applications — from predictive maintenance models to
+                offline AI assistants running on embedded hardware.
+              </p>
+            </Reveal>
+          </div>
+        </section>
+
+        <ProjectStack />
+
+        <Skills />
+
+        <section id="experience" className="py-24 sm:py-32">
+          <div className="mx-auto max-w-6xl px-5 sm:px-8">
+            <Reveal>
+              <p className="eyebrow">Background</p>
+              <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">
+                Experience &amp; Education
+              </h2>
+            </Reveal>
+            <div className="mt-12 grid gap-14 lg:grid-cols-2 lg:gap-20">
+              <Timeline title="Experience" items={experience} />
+              <Timeline title="Education" items={education} />
+            </div>
+          </div>
+        </section>
+
+        <Certifications />
+
+        <Contact />
+      </main>
+    </>
   );
 }
