@@ -52,6 +52,9 @@
   --color-jet: var(--jet);
   --color-ash: var(--ash);
   --color-deep: var(--deep);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-steel: var(--steel);
   --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
   --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
@@ -67,6 +70,9 @@
   --platinum: oklch(0.9067 0 89.88);
   --ash: oklch(0.8047 0 89.88);
   --deep: oklch(0.2031 0.109 265.25);
+  --gold: oklch(0.6924 0.1132 62.16);
+  --gold-soft: oklch(0.8306 0.1075 78.29);
+  --steel: oklch(0.5107 0.0326 250.5);
 
   --background: oklch(0.1338 0.0633 262.29);
   --foreground: oklch(0.9727 0.0017 247.84);
@@ -132,12 +138,95 @@
 }
 
 @utility eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
   font-family: var(--font-mono);
-  font-size: 0.6875rem;
-  letter-spacing: 0.22em;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--muted-foreground);
+  color: var(--gold-soft);
+  &::before {
+    content: "";
+    width: 1.5rem;
+    height: 2px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--gold), transparent);
+  }
 }
+
+@utility eyebrow-plain {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-soft);
+}
+
+@utility text-angular {
+  background-image: conic-gradient(
+    from 200deg at 30% 50%,
+    var(--gold-soft),
+    var(--platinum),
+    color-mix(in oklab, var(--primary) 85%, white),
+    var(--gold),
+    var(--gold-soft)
+  );
+  background-size: 200% 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: angular-shift 12s ease-in-out infinite;
+}
+
+@utility text-angular-soft {
+  background-image: conic-gradient(
+    from 160deg at 40% 50%,
+    var(--platinum),
+    var(--gold-soft),
+    color-mix(in oklab, var(--primary) 70%, white),
+    var(--platinum)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@utility glow-field {
+  background:
+    radial-gradient(
+      42rem 28rem at 12% 0%,
+      color-mix(in oklab, var(--primary) 28%, transparent),
+      transparent 70%
+    ),
+    radial-gradient(
+      34rem 24rem at 92% 22%,
+      color-mix(in oklab, var(--gold) 16%, transparent),
+      transparent 70%
+    );
+}
+
+@utility rule-gradient {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    var(--gold),
+    color-mix(in oklab, var(--primary) 80%, transparent),
+    transparent
+  );
+}
+
+@keyframes angular-shift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
 
 @utility link-arrow {
   display: inline-flex;
