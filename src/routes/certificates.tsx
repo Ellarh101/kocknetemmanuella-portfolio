@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowUpRight, ArrowLeft } from "lucide-react";
-import { certifications, linkedinDetails, profile } from "@/data/site";
+import { ArrowUpRight, ArrowLeft, FileText, Download } from "lucide-react";
+import { certifications, profile } from "@/data/site";
 import { Reveal } from "@/components/Reveal";
 
 const title = "Certificates — Kocknet Emmanuella";
@@ -23,64 +23,81 @@ export const Route = createFileRoute("/certificates")({
 
 function CertificatesPage() {
   return (
-    <main className="mx-auto max-w-4xl px-5 py-24 sm:px-8 sm:py-32">
+    <main className="mx-auto max-w-5xl px-5 py-24 sm:px-8 sm:py-32">
       <Link to="/" className="link-arrow text-sm">
         <ArrowLeft size={15} /> Back to portfolio
       </Link>
 
       <Reveal>
         <p className="eyebrow mt-10">Archive</p>
-        <h1 className="mt-3 text-4xl font-semibold sm:text-5xl">Certificates</h1>
+        <h1 className="text-angular-soft mt-3 text-4xl font-semibold sm:text-5xl">
+          Certificates
+        </h1>
         <p className="mt-5 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-          A single place for every credential. Each entry links to its verification
-          page; certificate documents and video walkthroughs can be added here as they
-          become available.
+          Every credential in one place — hosted directly, so each document opens or
+          downloads without needing an external account.
         </p>
       </Reveal>
 
-      <ul className="mt-12 divide-y divide-border border-y border-border">
+      <div className="mt-12 grid gap-6 sm:grid-cols-2">
         {certifications.map((c, i) => (
-          <Reveal as="li" key={c.title} delay={i * 70}>
-            <a
-              href={c.verifyUrl}
-              target="_blank"
-              rel="noreferrer noopener"
-              className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 py-6 transition-opacity hover:opacity-80"
-            >
-              <span className="min-w-0">
-                <span className="block text-base font-medium text-foreground">
-                  {c.title}
-                </span>
-                <span className="mt-1 block text-sm text-muted-foreground">
-                  {c.issuer}
-                </span>
-              </span>
-              <ArrowUpRight size={18} className="shrink-0 text-primary" />
-            </a>
+          <Reveal key={c.title} delay={i * 70}>
+            <article className="surface flex h-full flex-col overflow-hidden rounded-xl transition-colors hover:border-gold/50">
+              <div className="aspect-[16/10] w-full overflow-hidden border-b border-border bg-graphite/40">
+                {c.kind === "image" ? (
+                  <img
+                    src={c.fileUrl}
+                    alt={`${c.title} certificate issued by ${c.issuer}`}
+                    loading="lazy"
+                    className="h-full w-full object-cover object-top"
+                  />
+                ) : (
+                  <div className="grid h-full w-full place-items-center text-gold/70">
+                    <FileText size={40} strokeWidth={1.2} />
+                  </div>
+                )}
+              </div>
+              <div className="flex flex-1 flex-col p-5">
+                <h2 className="text-base font-semibold text-foreground">{c.title}</h2>
+                <p className="mt-1 text-sm text-ash/80">{c.issuer}</p>
+                {c.date && (
+                  <p className="mt-1 text-xs text-muted-foreground">{c.date}</p>
+                )}
+                <div className="mt-4 flex flex-wrap items-center gap-4 pt-1">
+                  <a
+                    href={c.fileUrl}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="link-arrow text-sm"
+                  >
+                    Open <ArrowUpRight size={14} />
+                  </a>
+                  <a
+                    href={c.fileUrl}
+                    download
+                    className="link-arrow text-sm"
+                  >
+                    Download <Download size={14} />
+                  </a>
+                </div>
+              </div>
+            </article>
           </Reveal>
         ))}
-      </ul>
+      </div>
 
       <Reveal delay={120}>
         <div className="surface mt-12 rounded-xl p-6">
           <p className="text-sm text-muted-foreground">
-            All credentials are also listed on{" "}
-            <a
-              href={linkedinDetails.certifications}
-              target="_blank"
-              rel="noreferrer noopener"
-              className="text-primary hover:opacity-80"
-            >
-              LinkedIn
-            </a>
-            . To add certificate files or videos here, send them to{" "}
+            More certificates and video walkthroughs can be added to this archive — send
+            the files to{" "}
             <a
               href={`mailto:${profile.email}`}
-              className="text-primary hover:opacity-80"
+              className="text-gold-soft hover:opacity-80"
             >
               {profile.email}
-            </a>{" "}
-            and they can be embedded in this archive.
+            </a>
+            .
           </p>
         </div>
       </Reveal>
