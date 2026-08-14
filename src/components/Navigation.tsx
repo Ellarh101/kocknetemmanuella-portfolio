@@ -62,14 +62,15 @@ export function Navigation() {
               <a
                 href={l.href}
                 className={cn(
-                  "text-sm transition-colors",
+                  "text-sm font-medium transition-colors",
                   active === l.href.slice(1)
-                    ? "text-foreground"
-                    : "text-muted-foreground hover:text-foreground",
+                    ? "text-gold-soft"
+                    : "text-ash/80 hover:text-gold-soft",
                 )}
               >
                 {l.label}
               </a>
+
             </li>
           ))}
         </ul>
