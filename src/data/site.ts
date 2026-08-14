@@ -106,19 +106,41 @@ export const education: TimelineItem[] = [
   },
 ];
 
+import ibmCert from "@/assets/ibm-data-science.pdf.asset.json";
+import supervisedMlCert from "@/assets/supervised-ml.pdf.asset.json";
+import sqlCert from "@/assets/intro-to-sql.png.asset.json";
+
 export type Certification = {
   title: string;
   issuer: string;
-  verifyUrl: string;
+  date?: string;
+  fileUrl: string;
+  kind: "pdf" | "image";
 };
 
 export const certifications: Certification[] = [
   {
-    title: "Verified certifications",
-    issuer: "LinkedIn profile",
-    verifyUrl: linkedinDetails.certifications,
+    title: "Supervised Machine Learning: Regression and Classification",
+    issuer: "DeepLearning.AI & Stanford University — Coursera",
+    date: "Mar 2026",
+    fileUrl: supervisedMlCert.url,
+    kind: "pdf",
+  },
+  {
+    title: "IBM Data Science",
+    issuer: "IBM — Coursera",
+    fileUrl: ibmCert.url,
+    kind: "pdf",
+  },
+  {
+    title: "Intro to SQL",
+    issuer: "Kaggle",
+    date: "Jul 2025",
+    fileUrl: sqlCert.url,
+    kind: "image",
   },
 ];
+
 
 export const navLinks = [
   { label: "Home", href: "#home" },
