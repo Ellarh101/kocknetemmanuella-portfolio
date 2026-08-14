@@ -6,12 +6,13 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
     <article className="surface flex h-full flex-col gap-6 rounded-2xl p-6 sm:p-9 lg:flex-row lg:items-stretch lg:gap-10">
       <div className="flex min-w-0 flex-1 flex-col">
         <div className="flex items-center gap-3">
-          <span className="eyebrow">
+          <span className="eyebrow-plain text-gold">
             {String(index + 1).padStart(2, "0")}
           </span>
-          <span className="h-px w-8 bg-border" />
-          <span className="eyebrow">{project.accentLabel}</span>
+          <span className="h-px w-8 bg-gradient-to-r from-gold to-transparent" />
+          <span className="eyebrow-plain">{project.accentLabel}</span>
         </div>
+
 
         <h3 className="mt-5 text-xl font-semibold text-foreground sm:text-2xl lg:text-[1.75rem] lg:leading-tight">
           {project.title}

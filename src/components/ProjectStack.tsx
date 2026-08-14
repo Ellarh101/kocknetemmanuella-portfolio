@@ -60,9 +60,12 @@ export function ProjectStack() {
   const header = (
     <Reveal className="mx-auto max-w-6xl px-5 sm:px-8">
       <p className="eyebrow">Selected work</p>
-      <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">Projects</h2>
+      <h2 className="text-angular-soft mt-3 text-3xl font-semibold sm:text-4xl">
+        Projects
+      </h2>
     </Reveal>
   );
+
 
   if (reduced) {
     return (
