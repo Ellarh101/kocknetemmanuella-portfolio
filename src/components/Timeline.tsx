@@ -12,10 +12,11 @@ export function Timeline({ title, items }: { title: string; items: TimelineItem[
         {items.map((item, i) => (
           <Reveal as="li" key={item.title + item.period} delay={i * 70}>
             <div className="relative pb-9 pl-6 last:pb-0">
-              <span className="absolute top-1.5 -left-[4.5px] h-2 w-2 rounded-full bg-primary" />
-              <p className="eyebrow">{item.period}</p>
-              <p className="mt-2 text-sm font-medium text-foreground">{item.title}</p>
-              <p className="text-sm text-muted-foreground">{item.org}</p>
+              <span className="absolute top-1.5 -left-[4.5px] h-2 w-2 rounded-full bg-gold" />
+              <p className="eyebrow-plain">{item.period}</p>
+              <p className="mt-2 text-base font-semibold text-foreground">{item.title}</p>
+              <p className="text-sm text-ash/80">{item.org}</p>
+
               <p className="mt-2 max-w-xl text-sm leading-relaxed text-muted-foreground">
                 {item.detail}
               </p>

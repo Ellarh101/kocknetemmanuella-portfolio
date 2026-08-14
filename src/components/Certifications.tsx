@@ -5,12 +5,15 @@ import { Reveal } from "./Reveal";
 
 export function Certifications() {
   return (
-    <section className="py-24 sm:py-32">
+    <section className="py-16 sm:py-24">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <Reveal>
           <p className="eyebrow">Credentials</p>
-          <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">Certifications</h2>
+          <h2 className="text-angular-soft mt-3 text-3xl font-semibold sm:text-4xl">
+            Certifications
+          </h2>
         </Reveal>
+
 
         <ul className="mt-10 grid gap-4 sm:grid-cols-2">
           {certifications.map((c, i) => (
