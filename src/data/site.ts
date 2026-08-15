@@ -4,6 +4,8 @@ import sqlCert from "@/assets/intro-to-sql.png.asset.json";
 import aiFluencyCert from "@/assets/ai-fluency-anthropic.pdf.asset.json";
 import pythonAdvancedCert from "@/assets/python-advanced.pdf.asset.json";
 import pythonBeginnerCert from "@/assets/python-beginners-nitda.pdf.asset.json";
+import predictiveMaintenanceImg from "@/assets/predictive-maintenance-app.jpeg.asset.json";
+import mechatronicTutorImg from "@/assets/mechatronic-tutor-device.png.asset.json";
 
 export const profile = {
   name: "Kocknet Emmanuella",
