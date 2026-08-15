@@ -1,6 +1,9 @@
 import ibmCert from "@/assets/ibm-data-science.pdf.asset.json";
 import supervisedMlCert from "@/assets/supervised-ml.pdf.asset.json";
 import sqlCert from "@/assets/intro-to-sql.png.asset.json";
+import aiFluencyCert from "@/assets/ai-fluency-anthropic.pdf.asset.json";
+import pythonAdvancedCert from "@/assets/python-advanced.pdf.asset.json";
+import pythonBeginnerCert from "@/assets/python-beginners-nitda.pdf.asset.json";
 
 export const profile = {
   name: "Kocknet Emmanuella",
