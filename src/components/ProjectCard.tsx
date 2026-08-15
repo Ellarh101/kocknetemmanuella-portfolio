@@ -55,18 +55,33 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
         </div>
       </div>
 
-      <div
-        aria-hidden
-        className="relative hidden w-[38%] shrink-0 overflow-hidden rounded-xl border border-border bg-onyx/60 lg:block"
-      >
-        <div className="absolute inset-0 opacity-[0.35] [background-image:linear-gradient(to_right,var(--color-border)_1px,transparent_1px),linear-gradient(to_bottom,var(--color-border)_1px,transparent_1px)] [background-size:28px_28px]" />
-        <div className="absolute inset-0 grid place-items-center">
-          <span className="font-mono text-[0.7rem] tracking-[0.3em] text-muted-foreground uppercase">
-            {project.accentLabel}
-          </span>
-        </div>
-        <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-background/70 to-transparent" />
+      <div className="relative hidden w-[38%] shrink-0 overflow-hidden rounded-xl border border-border bg-onyx/60 lg:block">
+        {project.image ? (
+          <>
+            <img
+              src={project.image}
+              alt={project.imageAlt ?? project.title}
+              loading="lazy"
+              className="absolute inset-0 h-full w-full object-cover object-top opacity-90 transition-transform duration-500 hover:scale-[1.03]"
+            />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/80 via-background/10 to-transparent" />
+            <span className="pointer-events-none absolute bottom-3 left-3 font-mono text-[0.65rem] tracking-[0.25em] text-ash/90 uppercase">
+              {project.accentLabel}
+            </span>
+          </>
+        ) : (
+          <div aria-hidden>
+            <div className="absolute inset-0 opacity-[0.35] [background-image:linear-gradient(to_right,var(--color-border)_1px,transparent_1px),linear-gradient(to_bottom,var(--color-border)_1px,transparent_1px)] [background-size:28px_28px]" />
+            <div className="absolute inset-0 grid place-items-center">
+              <span className="font-mono text-[0.7rem] tracking-[0.3em] text-muted-foreground uppercase">
+                {project.accentLabel}
+              </span>
+            </div>
+            <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-background/70 to-transparent" />
+          </div>
+        )}
       </div>
+
     </article>
   );
 }
