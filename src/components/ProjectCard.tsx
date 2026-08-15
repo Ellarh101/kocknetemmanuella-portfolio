@@ -13,6 +13,17 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
           <span className="eyebrow-plain">{project.accentLabel}</span>
         </div>
 
+        {project.image && (
+          <div className="relative mt-5 h-28 overflow-hidden rounded-lg border border-border bg-onyx/60 sm:h-32 lg:hidden">
+            <img
+              src={project.image}
+              alt={project.imageAlt ?? project.title}
+              loading="lazy"
+              className="h-full w-full object-cover object-top opacity-90"
+            />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/70 to-transparent" />
+          </div>
+        )}
 
         <h3 className="mt-5 text-xl font-semibold text-foreground sm:text-2xl lg:text-[1.75rem] lg:leading-tight">
           {project.title}
