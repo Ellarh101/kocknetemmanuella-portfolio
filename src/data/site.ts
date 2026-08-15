@@ -167,6 +167,24 @@ export const certifications: Certification[] = [
     kind: "pdf",
   },
   {
+    title: "AI Fluency",
+    issuer: "Anthropic",
+    fileUrl: aiFluencyCert.url,
+    kind: "pdf",
+  },
+  {
+    title: "Python (Advanced)",
+    issuer: "NITDA",
+    fileUrl: pythonAdvancedCert.url,
+    kind: "pdf",
+  },
+  {
+    title: "Python (Beginners)",
+    issuer: "NITDA",
+    fileUrl: pythonBeginnerCert.url,
+    kind: "pdf",
+  },
+  {
     title: "Intro to SQL",
     issuer: "Kaggle",
     date: "Jul 2025",
