@@ -106,9 +106,8 @@ export const education: TimelineItem[] = [
   },
 ];
 
-import ibmCert from "@/assets/ibm-data-science.pdf.asset.json";
-import supervisedMlCert from "@/assets/supervised-ml.pdf.asset.json";
-import sqlCert from "@/assets/intro-to-sql.png.asset.json";
+
+
 
 export type Certification = {
   title: string;
