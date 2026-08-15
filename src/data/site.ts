@@ -1,3 +1,7 @@
+import ibmCert from "@/assets/ibm-data-science.pdf.asset.json";
+import supervisedMlCert from "@/assets/supervised-ml.pdf.asset.json";
+import sqlCert from "@/assets/intro-to-sql.png.asset.json";
+
 export const profile = {
   name: "Kocknet Emmanuella",
   role: "Machine Learning Engineer",
