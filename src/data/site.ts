@@ -4,6 +4,8 @@ import sqlCert from "@/assets/intro-to-sql.png.asset.json";
 import aiFluencyCert from "@/assets/ai-fluency-anthropic.pdf.asset.json";
 import pythonAdvancedCert from "@/assets/python-advanced.pdf.asset.json";
 import pythonBeginnerCert from "@/assets/python-beginners-nitda.pdf.asset.json";
+import predictiveMaintenanceImg from "@/assets/predictive-maintenance-app.jpeg.asset.json";
+import mechatronicTutorImg from "@/assets/mechatronic-tutor-device.png.asset.json";
 
 export const profile = {
   name: "Kocknet Emmanuella",
@@ -30,6 +32,8 @@ export type Project = {
   github: string;
   demo?: string;
   accentLabel: string;
+  image?: string;
+  imageAlt?: string;
 };
 
 export const projects: Project[] = [
@@ -40,6 +44,9 @@ export const projects: Project[] = [
     tech: ["Python", "LSTM", "CatBoost", "SHAP", "FastAPI", "Flutter"],
     github: "https://github.com/Ellarh101/Predictive-maintenance-ml",
     accentLabel: "Predictive Maintenance",
+    image: predictiveMaintenanceImg.url,
+    imageAlt:
+      "Predictive Maintenance mobile app listing monitored aircraft engines with health filters",
   },
   {
     title: "Mechatronic Tutor",
@@ -49,7 +56,11 @@ export const projects: Project[] = [
     github:
       "https://github.com/abelbajeh/Mechatronics-tutor-with-edge-AI-capability",
     accentLabel: "Edge AI",
+    image: mechatronicTutorImg.url,
+    imageAlt:
+      "3D-printed blue enclosure housing the Mechatronic Tutor's Raspberry Pi and touchscreen",
   },
+
   {
     title: "Document to Speech Converter",
     description:
