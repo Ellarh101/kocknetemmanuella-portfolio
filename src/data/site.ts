@@ -66,10 +66,40 @@ export const projects: Project[] = [
 ];
 
 export const skillGroups = [
-  { label: "Machine Learning", items: ["Python", "Scikit-learn", "TensorFlow", "PyTorch"] },
-  { label: "Data", items: ["Pandas", "NumPy", "SQL"] },
-  { label: "ML Engineering", items: ["FastAPI", "Docker", "Git", "APIs"] },
-  { label: "AI", items: ["LLMs", "RAG", "NLP", "Computer Vision", "Edge AI"] },
+  {
+    label: "Machine Learning",
+    items: [
+      "Supervised Learning",
+      "Unsupervised Learning",
+      "Feature Engineering",
+      "Model Evaluation",
+      "Hyperparameter Tuning",
+      "Cross-Validation",
+      "Ensemble Learning",
+      "Time-Series Modeling",
+      "Scikit-learn",
+      "XGBoost",
+      "LightGBM",
+      "CatBoost",
+    ],
+  },
+  {
+    label: "Data",
+    items: [
+      "Data Preprocessing",
+      "Data Cleaning",
+      "Exploratory Data Analysis (EDA)",
+      "SQL",
+      "Pandas",
+      "NumPy",
+      "Matplotlib",
+      "Data Visualization",
+    ],
+  },
+  {
+    label: "MLOps / Deployment",
+    items: ["Model Deployment", "REST APIs", "FastAPI", "Docker", "CI/CD", "ML Pipelines"],
+  },
 ];
 
 export type TimelineItem = {
@@ -82,20 +112,18 @@ export type TimelineItem = {
 
 export const experience: TimelineItem[] = [
   {
-    period: "Present",
-    title: "Machine Learning Engineer",
-    org: "Independent / Project-based",
+    period: "Mar 2025 – Oct 2025",
+    title: "Intern — SIWES II (Data, Machine Learning & Embedded Systems)",
+    org: "National Centre for Artificial Intelligence and Robotics (NCAIR)",
     detail:
-      "Designing and shipping ML systems end to end — data pipelines, model training, evaluation and deployment behind APIs and on edge devices.",
-    link: linkedinDetails.experience,
+      "Built and evaluated ML models with Python, Scikit-learn, and TensorFlow for engineering datasets. Applied data preprocessing, feature engineering, and EDA to real-world AI solutions while integrating software with embedded hardware and microcontrollers.",
   },
   {
-    period: "Selected work",
-    title: "Applied AI & Embedded Systems",
-    org: "Mechatronics projects",
+    period: "Earlier",
+    title: "Intern — SIWES I (Artificial Intelligence & Data Science)",
+    org: "National Centre for Artificial Intelligence and Robotics (NCAIR)",
     detail:
-      "Bridging machine learning with hardware: predictive maintenance, offline edge assistants and vision systems on constrained devices.",
-    link: linkedinDetails.experience,
+      "Completed hands-on training in AI, Data Science, and Python programming. Collaborated on team projects including an automatic spending tracker, a document-to-speech converter, and an emotion-based music player.",
   },
 ];
 
