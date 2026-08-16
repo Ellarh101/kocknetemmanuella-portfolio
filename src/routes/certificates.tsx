@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight, ArrowLeft, FileText, Download } from "lucide-react";
-import { certifications, profile } from "@/data/site";
+import { certifications, profile, mailtoHref } from "@/data/site";
 import { Reveal } from "@/components/Reveal";
 
 const title = "Certificates — Kocknet Emmanuella";
@@ -92,7 +92,7 @@ function CertificatesPage() {
             More certificates and video walkthroughs can be added to this archive — send
             the files to{" "}
             <a
-              href={`mailto:${profile.email}`}
+              href={mailtoHref}
               className="text-gold-soft hover:opacity-80"
             >
               {profile.email}
