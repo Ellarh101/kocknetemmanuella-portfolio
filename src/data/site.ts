@@ -18,6 +18,14 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/kocknet-emmanuella-86aa69356",
 };
 
+export const mailtoHref = `mailto:${profile.email}?subject=${encodeURIComponent(
+  "Hello Kocknet — portfolio enquiry",
+)}`;
+
+export const gmailComposeHref = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
+  profile.email,
+)}`;
+
 export const linkedinDetails = {
   experience:
     "https://www.linkedin.com/in/kocknet-emmanuella-86aa69356/details/experience/",

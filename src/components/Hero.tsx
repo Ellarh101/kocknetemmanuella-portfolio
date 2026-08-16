@@ -1,5 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
-import { profile } from "@/data/site";
+import { profile, mailtoHref } from "@/data/site";
 
 const marks = [
   "Data pipelines",
@@ -73,7 +73,7 @@ export function Hero() {
           style={{ animationDelay: "360ms", animationFillMode: "backwards" }}
         >
           <a
-            href={`mailto:${profile.email}`}
+            href={mailtoHref}
             className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-primary to-gold px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5"
           >
             Email me <ArrowUpRight size={15} />

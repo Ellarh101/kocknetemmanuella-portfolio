@@ -1,5 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
-import { profile } from "@/data/site";
+import { profile, mailtoHref, gmailComposeHref } from "@/data/site";
 import { Reveal } from "./Reveal";
 
 export function Contact() {
@@ -22,7 +22,7 @@ export function Contact() {
 
         <Reveal delay={90}>
           <a
-            href={`mailto:${profile.email}`}
+            href={mailtoHref}
             className="mt-8 inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/5 px-5 py-3 font-display text-base font-medium break-all text-gold-soft transition-colors hover:bg-gold/10 sm:text-xl"
           >
             {profile.email} <ArrowUpRight size={20} />
