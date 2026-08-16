@@ -100,6 +100,33 @@ export function Hero() {
           >
             LinkedIn
           </a>
+          <a
+            href={profile.resume}
+            target="_blank"
+            rel="noreferrer noopener"
+            className="inline-flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm font-medium text-ash transition-colors hover:border-gold/50 hover:text-gold-soft"
+          >
+            <FileText size={15} /> View CV
+          </a>
+        </div>
+        </div>
+
+        <div
+          className="relative animate-fade-in justify-self-center lg:justify-self-end"
+          style={{ animationDelay: "260ms", animationFillMode: "backwards" }}
+        >
+          <div
+            aria-hidden
+            className="absolute -inset-3 rounded-[2rem] bg-gradient-to-br from-primary/25 via-gold/20 to-transparent blur-2xl"
+          />
+          <img
+            src={profile.headshot}
+            alt={profile.headshotAlt}
+            loading="eager"
+            width={520}
+            height={650}
+            className="relative w-56 rounded-[1.5rem] border border-gold/25 object-cover shadow-2xl sm:w-72 lg:w-full lg:max-w-sm"
+          />
         </div>
       </div>
     </section>
