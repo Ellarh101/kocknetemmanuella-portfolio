@@ -68,6 +68,9 @@ export const projects: Project[] = [
     tech: ["Python", "NLP", "TTS", "Document Parsing"],
     github: "https://github.com/Ellarh101/Document-to-speech-converter",
     accentLabel: "Speech & NLP",
+    image: doc2speechImg.url,
+    imageAlt:
+      "Doc2Speech Translator desktop app translating text and offering online or offline text-to-speech",
   },
   {
     title: "Fruit Classification Model",
@@ -76,7 +79,11 @@ export const projects: Project[] = [
     tech: ["Python", "TensorFlow", "CNN", "Computer Vision"],
     github: "https://github.com/Ellarh101/Fruit-classifation-model",
     accentLabel: "Computer Vision",
+    image: fruitClassifierImg.url,
+    imageAlt:
+      "Grid of fruit images with the model's predicted versus true labels for kiwi, pineapple and cherry",
   },
+
 ];
 
 export const skillGroups = [
