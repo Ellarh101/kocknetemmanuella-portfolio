@@ -27,7 +27,19 @@ export function Contact() {
           >
             {profile.email} <ArrowUpRight size={20} />
           </a>
+          <p className="mt-3 text-xs text-muted-foreground">
+            No mail app?{" "}
+            <a
+              href={gmailComposeHref}
+              target="_blank"
+              rel="noreferrer noopener"
+              className="text-gold-soft hover:opacity-80"
+            >
+              Compose in Gmail
+            </a>
+          </p>
         </Reveal>
+
 
         <Reveal delay={160}>
           <div className="mt-8 flex flex-wrap gap-x-8 gap-y-3">
