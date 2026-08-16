@@ -51,8 +51,7 @@ export function Hero() {
           className="mt-5 max-w-xl animate-fade-in text-base leading-relaxed text-foreground/75 sm:text-lg"
           style={{ animationDelay: "220ms", animationFillMode: "backwards" }}
         >
-          {profile.tagline} I design, train and ship models that survive contact with
-          real hardware, real users and real data.
+          {summary}
         </p>
 
         <ul
