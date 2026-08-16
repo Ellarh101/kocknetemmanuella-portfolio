@@ -5,6 +5,8 @@ import aiFluencyCert from "@/assets/ai-fluency-anthropic.pdf.asset.json";
 import pythonAdvancedCert from "@/assets/python-advanced.pdf.asset.json";
 import pythonBeginnerCert from "@/assets/python-beginners-nitda.pdf.asset.json";
 import predictiveMaintenanceImg from "@/assets/predictive-maintenance-app.jpeg.asset.json";
+import headshotAsset from "@/assets/kocknet-headshot.png.asset.json";
+import resumeAsset from "@/assets/kocknet-resume.pdf.asset.json";
 import mechatronicTutorImg from "@/assets/mechatronic-tutor-device.png.asset.json";
 import doc2speechImg from "@/assets/doc2speech-translator.png.asset.json";
 import fruitClassifierImg from "@/assets/fruit-classification-output.png.asset.json";
@@ -13,10 +15,17 @@ export const profile = {
   name: "Kocknet Emmanuella",
   role: "Machine Learning Engineer",
   tagline: "Building intelligent systems from data to deployment.",
+  location: "Abuja, Nigeria",
   email: "kocknetemmanuella55@gmail.com",
   github: "https://github.com/Ellarh101",
   linkedin: "https://www.linkedin.com/in/kocknet-emmanuella-86aa69356",
+  headshot: headshotAsset.url,
+  headshotAlt: "Portrait of Kocknet Emmanuella, Machine Learning Engineer",
+  resume: resumeAsset.url,
 };
+
+export const summary =
+  "Machine Learning Engineer experienced in building end-to-end AI systems across machine learning, deep learning, computer vision, NLP and Edge AI — from data preprocessing and model development through to deployed, production-oriented applications.";
 
 export const mailtoHref = `mailto:${profile.email}?subject=${encodeURIComponent(
   "Hello Kocknet — portfolio enquiry",
@@ -26,14 +35,6 @@ export const gmailComposeHref = `https://mail.google.com/mail/?view=cm&fs=1&to=$
   profile.email,
 )}`;
 
-export const linkedinDetails = {
-  experience:
-    "https://www.linkedin.com/in/kocknet-emmanuella-86aa69356/details/experience/",
-  education:
-    "https://www.linkedin.com/in/kocknet-emmanuella-86aa69356/details/education/",
-  certifications:
-    "https://www.linkedin.com/in/kocknet-emmanuella-86aa69356/details/certifications/",
-};
 
 export type Project = {
   title: string;
@@ -144,14 +145,14 @@ export type TimelineItem = {
 export const experience: TimelineItem[] = [
   {
     period: "Mar 2025 – Oct 2025",
-    title: "Intern — SIWES II (Data, Machine Learning & Embedded Systems)",
+    title: "Intern — Machine Learning & Embedded Systems",
     org: "National Centre for Artificial Intelligence and Robotics (NCAIR)",
     detail:
       "Built and evaluated ML models with Python, Scikit-learn, and TensorFlow for engineering datasets. Applied data preprocessing, feature engineering, and EDA to real-world AI solutions while integrating software with embedded hardware and microcontrollers.",
   },
   {
-    period: "Earlier",
-    title: "Intern — SIWES I (Artificial Intelligence & Data Science)",
+    period: "Jul 2024 – Sep 2024",
+    title: "Intern — Artificial Intelligence & Data Science",
     org: "National Centre for Artificial Intelligence and Robotics (NCAIR)",
     detail:
       "Completed hands-on training in AI, Data Science, and Python programming. Collaborated on team projects including an automatic spending tracker, a document-to-speech converter, and an emotion-based music player.",
@@ -160,12 +161,11 @@ export const experience: TimelineItem[] = [
 
 export const education: TimelineItem[] = [
   {
-    period: "Degree",
-    title: "Mechatronics Engineering",
-    org: "University",
+    period: "2026",
+    title: "B.Eng. Mechatronics Engineering",
+    org: "Air Force Institute of Technology (AFIT), Kaduna, Nigeria",
     detail:
-      "Engineering foundation across control, electronics and embedded systems — the basis for building ML that runs in the real world.",
-    link: linkedinDetails.education,
+      "Engineering foundation across control systems, electronics and embedded systems, supporting the development of machine learning solutions for real-world hardware.",
   },
 ];
 

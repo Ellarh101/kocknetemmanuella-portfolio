@@ -1,5 +1,5 @@
-import { ArrowUpRight } from "lucide-react";
-import { profile, mailtoHref } from "@/data/site";
+import { ArrowUpRight, FileText } from "lucide-react";
+import { profile, mailtoHref, summary } from "@/data/site";
 
 const marks = [
   "Data pipelines",
@@ -21,7 +21,8 @@ export function Hero() {
         className="pointer-events-none absolute inset-0 opacity-[0.16] [background-image:linear-gradient(to_right,var(--color-border)_1px,transparent_1px),linear-gradient(to_bottom,var(--color-border)_1px,transparent_1px)] [background-size:64px_64px] [mask-image:radial-gradient(ellipse_at_50%_35%,black,transparent_72%)]"
       />
 
-      <div className="relative mx-auto w-full max-w-6xl px-5 sm:px-8">
+      <div className="relative mx-auto grid w-full max-w-6xl items-center gap-10 px-5 sm:px-8 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)] lg:gap-14">
+        <div>
         <p className="eyebrow animate-fade-in">Machine Learning Engineer</p>
 
         <h1
@@ -50,8 +51,7 @@ export function Hero() {
           className="mt-5 max-w-xl animate-fade-in text-base leading-relaxed text-foreground/75 sm:text-lg"
           style={{ animationDelay: "220ms", animationFillMode: "backwards" }}
         >
-          {profile.tagline} I design, train and ship models that survive contact with
-          real hardware, real users and real data.
+          {summary}
         </p>
 
         <ul
@@ -100,6 +100,33 @@ export function Hero() {
           >
             LinkedIn
           </a>
+          <a
+            href={profile.resume}
+            target="_blank"
+            rel="noreferrer noopener"
+            className="inline-flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm font-medium text-ash transition-colors hover:border-gold/50 hover:text-gold-soft"
+          >
+            <FileText size={15} /> View CV
+          </a>
+        </div>
+        </div>
+
+        <div
+          className="relative animate-fade-in justify-self-center lg:justify-self-end"
+          style={{ animationDelay: "260ms", animationFillMode: "backwards" }}
+        >
+          <div
+            aria-hidden
+            className="absolute -inset-3 rounded-[2rem] bg-gradient-to-br from-primary/25 via-gold/20 to-transparent blur-2xl"
+          />
+          <img
+            src={profile.headshot}
+            alt={profile.headshotAlt}
+            loading="eager"
+            width={520}
+            height={650}
+            className="relative w-56 rounded-[1.5rem] border border-gold/25 object-cover shadow-2xl sm:w-72 lg:w-full lg:max-w-sm"
+          />
         </div>
       </div>
     </section>

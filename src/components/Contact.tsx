@@ -59,7 +59,25 @@ export function Contact() {
             >
               LinkedIn
             </a>
+            <a
+              href={profile.resume}
+              target="_blank"
+              rel="noreferrer noopener"
+              className="text-base font-medium text-ash transition-colors hover:text-gold-soft"
+            >
+              View CV
+            </a>
+            <a
+              href={profile.resume}
+              download
+              className="text-base font-medium text-ash transition-colors hover:text-gold-soft"
+            >
+              Download CV
+            </a>
           </div>
+          <p className="mt-4 text-sm text-muted-foreground">
+            Based in {profile.location} · Open to Machine Learning Engineer roles
+          </p>
         </Reveal>
 
 
