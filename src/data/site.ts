@@ -5,6 +5,8 @@ import aiFluencyCert from "@/assets/ai-fluency-anthropic.pdf.asset.json";
 import pythonAdvancedCert from "@/assets/python-advanced.pdf.asset.json";
 import pythonBeginnerCert from "@/assets/python-beginners-nitda.pdf.asset.json";
 import predictiveMaintenanceImg from "@/assets/predictive-maintenance-app.jpeg.asset.json";
+import headshotAsset from "@/assets/kocknet-headshot.png.asset.json";
+import resumeAsset from "@/assets/kocknet-resume.pdf.asset.json";
 import mechatronicTutorImg from "@/assets/mechatronic-tutor-device.png.asset.json";
 import doc2speechImg from "@/assets/doc2speech-translator.png.asset.json";
 import fruitClassifierImg from "@/assets/fruit-classification-output.png.asset.json";
@@ -13,10 +15,17 @@ export const profile = {
   name: "Kocknet Emmanuella",
   role: "Machine Learning Engineer",
   tagline: "Building intelligent systems from data to deployment.",
+  location: "Abuja, Nigeria",
   email: "kocknetemmanuella55@gmail.com",
   github: "https://github.com/Ellarh101",
   linkedin: "https://www.linkedin.com/in/kocknet-emmanuella-86aa69356",
+  headshot: headshotAsset.url,
+  headshotAlt: "Portrait of Kocknet Emmanuella, Machine Learning Engineer",
+  resume: resumeAsset.url,
 };
+
+export const summary =
+  "Machine Learning Engineer experienced in building end-to-end AI systems across machine learning, deep learning, computer vision, NLP and Edge AI — from data preprocessing and model development through to deployed, production-oriented applications.";
 
 export const mailtoHref = `mailto:${profile.email}?subject=${encodeURIComponent(
   "Hello Kocknet — portfolio enquiry",
