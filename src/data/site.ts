@@ -35,14 +35,6 @@ export const gmailComposeHref = `https://mail.google.com/mail/?view=cm&fs=1&to=$
   profile.email,
 )}`;
 
-export const linkedinDetails = {
-  experience:
-    "https://www.linkedin.com/in/kocknet-emmanuella-86aa69356/details/experience/",
-  education:
-    "https://www.linkedin.com/in/kocknet-emmanuella-86aa69356/details/education/",
-  certifications:
-    "https://www.linkedin.com/in/kocknet-emmanuella-86aa69356/details/certifications/",
-};
 
 export type Project = {
   title: string;

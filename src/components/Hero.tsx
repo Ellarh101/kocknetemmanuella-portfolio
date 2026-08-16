@@ -1,5 +1,5 @@
-import { ArrowUpRight } from "lucide-react";
-import { profile, mailtoHref } from "@/data/site";
+import { ArrowUpRight, FileText } from "lucide-react";
+import { profile, mailtoHref, summary } from "@/data/site";
 
 const marks = [
   "Data pipelines",
