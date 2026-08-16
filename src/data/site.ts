@@ -153,14 +153,14 @@ export type TimelineItem = {
 export const experience: TimelineItem[] = [
   {
     period: "Mar 2025 – Oct 2025",
-    title: "Intern — SIWES II (Data, Machine Learning & Embedded Systems)",
+    title: "Intern — Machine Learning & Embedded Systems",
     org: "National Centre for Artificial Intelligence and Robotics (NCAIR)",
     detail:
       "Built and evaluated ML models with Python, Scikit-learn, and TensorFlow for engineering datasets. Applied data preprocessing, feature engineering, and EDA to real-world AI solutions while integrating software with embedded hardware and microcontrollers.",
   },
   {
-    period: "Earlier",
-    title: "Intern — SIWES I (Artificial Intelligence & Data Science)",
+    period: "Jul 2024 – Sep 2024",
+    title: "Intern — Artificial Intelligence & Data Science",
     org: "National Centre for Artificial Intelligence and Robotics (NCAIR)",
     detail:
       "Completed hands-on training in AI, Data Science, and Python programming. Collaborated on team projects including an automatic spending tracker, a document-to-speech converter, and an emotion-based music player.",
@@ -169,12 +169,11 @@ export const experience: TimelineItem[] = [
 
 export const education: TimelineItem[] = [
   {
-    period: "Degree",
-    title: "Mechatronics Engineering",
-    org: "University",
+    period: "2026",
+    title: "B.Eng. Mechatronics Engineering",
+    org: "Air Force Institute of Technology (AFIT), Kaduna, Nigeria",
     detail:
-      "Engineering foundation across control, electronics and embedded systems — the basis for building ML that runs in the real world.",
-    link: linkedinDetails.education,
+      "Engineering foundation across control systems, electronics and embedded systems, supporting the development of machine learning solutions for real-world hardware.",
   },
 ];
 
