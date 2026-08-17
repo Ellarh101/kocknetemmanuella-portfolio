@@ -1,347 +1,162 @@
-# Kocknet Emmanuella | Machine Learning Engineer
+# Kocknet Emmanuella — Machine Learning Engineer Portfolio
 
-Build a premium, minimalist personal portfolio website for me as a Machine Learning Engineer.
+Personal portfolio website for **Kocknet Emmanuella**, a Machine Learning Engineer with a background in Mechatronics Engineering.
 
-The website should feel elegant, modern, technically sophisticated, clean, and intentional. It should look like a professional portfolio for an ML Engineer, not a generic software developer template.
+The portfolio showcases my machine learning projects, technical skills, professional experience, certifications, and engineering work.
 
-Overall Design
+## 🌐 Portfolio
 
-Use a minimalist visual system with:
+**Live Website:** [Add your deployed portfolio URL here]
+
+## ✨ Features
 
-Clean typography
+* Professional introduction and profile
+* Machine learning and software engineering skills
+* Featured projects with technical details and results
+* Project case studies
+* Professional experience
+* Education
+* Certifications
+* Downloadable CV
+* GitHub and LinkedIn links
+* Responsive design for desktop and mobile devices
 
-Plenty of whitespace
+## 🚀 Featured Projects
 
-Dark/charcoal grey and white as the primary palette
+### Aircraft Engine Remaining Useful Life Prediction
 
-One subtle accent color
+An end-to-end predictive maintenance system for estimating the Remaining Useful Life (RUL) of turbofan aircraft engines using the NASA C-MAPSS dataset.
 
-Very subtle borders and shadows
+**Technologies:**
 
-Smooth animations
+* Python
+* Pandas
+* NumPy
+* Scikit-learn
+* XGBoost
+* LightGBM
+* CatBoost
+* TensorFlow / Keras
+* LSTM
+* SHAP
+* FastAPI
+* JWT Authentication
+* Flutter
 
-Excellent spacing and alignment
+**Model Performance:**
 
-High-quality responsive design
+| Model    | Metric    | Result |
+| -------- | --------- | -----: |
+| LSTM     | Test MAE  |  10.37 |
+| LSTM     | Test RMSE |  14.23 |
+| CatBoost | Test RMSE |  16.70 |
 
-Mobile, tablet, and desktop support
+The project includes machine learning model development, explainability, a FastAPI backend, authentication, and a Flutter mobile application for interacting with predictions and engine sensor data.
 
-Do NOT use:
+## 🛠️ Tech Stack
 
-Excessive gradients
+### Programming
 
-Glowing neon effects
+* Python
+* SQL
 
-Floating blobs
+### Machine Learning & AI
 
-Excessive glassmorphism
+* Scikit-learn
+* TensorFlow
+* Keras
+* PyTorch
+* XGBoost
+* LightGBM
+* CatBoost
+* LSTM
 
-Excessive animations
+### Data Science
 
-Cluttered backgrounds
+* Pandas
+* NumPy
+* Matplotlib
+* Data preprocessing
+* Exploratory Data Analysis
+* Feature engineering
+* Model evaluation
+* Explainable AI
 
-Generic AI-themed illustrations
+### Backend & Engineering
 
-Huge amounts of text on the homepage
+* FastAPI
+* REST APIs
+* JWT Authentication
+* Git
+* GitHub
+* Linux
 
-The website should feel simple at first glance but extremely polished when interacted with.
+### Deployment & MLOps
 
-HERO SECTION
+* Model deployment
+* API deployment
+* Cloud technologies
+* MLOps workflows
 
-Create a clean hero section containing:
+## 📂 Project Structure
 
-Name:
-Kocknet Emmanuella
+```text
+kocknetemmanuella-portfolio/
+├── public/
+├── src/
+├── package.json
+├── README.md
+└── ...
+```
 
-Role:
-Machine Learning Engineer
+## 💻 Running Locally
 
-Short description:
-Building intelligent systems from data to deployment.
+Clone the repository:
 
-Include subtle entrance animations when the page loads.
+```bash
+git clone https://github.com/Ellarh101/kocknetemmanuella-portfolio.git
+```
 
-Include links for:
+Navigate into the project:
 
-GitHub
+```bash
+cd kocknetemmanuella-portfolio
+```
 
-LinkedIn
+Install dependencies:
 
-Email
+```bash
+npm install
+```
 
-The email must be a real clickable mail link using:
+Start the development server:
 
-mailto:MY_EMAIL_ADDRESS
-
-When the user clicks the email address/button, it should open their default email client with my email address already populated as the recipient.
-
-Do not use a fake contact form instead of the email link.
-
-PROJECTS SECTION
-
-This is the most important visual interaction on the website.
-
-Create a scroll-driven stacked project card animation.
-
-I want the project cards to behave like a stack of physical cards while the user scrolls.
-
-Desired interaction:
-
-When the Projects section begins:
-
-The first project card appears prominently.
-
-As the user scrolls downward, the next project card smoothly moves upward and stacks over/behind the previous card.
-
-The previous card should remain partially visible underneath.
-
-Continue this behavior for all project cards.
-
-Each card should appear to have depth and hierarchy.
-
-The cards should remain visually aligned rather than moving randomly around the screen.
-
-The animation should be smooth and controlled by scroll position.
-
-The cards should feel like they are physically stacking.
-
-When the final project is reached, the section should naturally transition into the next section.
-
-Use a sticky/pinned project container with scroll-driven transforms to achieve this effect.
-
-The animation should feel similar to a premium modern product website.
-
-Do NOT make the cards flip.
-
-Do NOT make them spin.
-
-Do NOT make them fly around the screen.
-
-Do NOT make the animation excessive.
-
-The effect should be subtle, smooth, sophisticated, and professional.
-
-Use transforms such as:
-
-translateY
-
-scale
-
-opacity
-
-subtle rotation if necessary
-
-The cards should progressively scale slightly smaller as they move deeper into the stack.
-
-The currently active project should remain the most prominent card.
-
-PROJECT CARD DESIGN
-
-Each project card should contain:
-
-Project title
-
-Short one-to-two sentence description
-
-Technologies used
-
-Small visual/preview area
-
-GitHub link
-
-Optional live demo link
-
-Every GitHub button/link must point to the actual GitHub repository URL for that specific project.
-
-Do not use placeholder links in the final implementation.
-
-Create the project data in a centralized data structure so I can easily replace the project information and URLs later.
-
-Example structure:
-
-Project 1:
-Title: Aircraft Engine Remaining Useful Life Prediction
-Description: End-to-end machine learning system for predicting the remaining useful life of aircraft engines using NASA C-MAPSS.
-Technologies: Python, LSTM, CatBoost, SHAP, FastAPI, Flutter
-GitHub: [ACTUAL_GITHUB_REPOSITORY_URL]
-
-Project 2:
-Title: Mechatronic Tutor
-Description: Edge AI-powered educational assistant designed to run locally on Raspberry Pi 5.
-Technologies: Python, BitNet, RAG, Vosk, Piper TTS, Raspberry Pi
-GitHub: [ACTUAL_GITHUB_REPOSITORY_URL]
-
-Make the GitHub links visually obvious but minimal.
-
-Use text such as:
-
-View on GitHub ↗
-
-When clicked, open the correct repository.
-
-ABOUT SECTION
-
-Create a concise About section explaining that I am a Machine Learning Engineer with a background in Mechatronics Engineering and an interest in building intelligent systems that connect machine learning with real-world applications.
-
-Keep this section concise.
-
-Do not create a huge wall of text.
-
-SKILLS SECTION
-
-Display my technical skills in a clean, minimal format.
-
-Group them into categories such as:
-
-Machine Learning
-Python, Scikit-learn, TensorFlow, PyTorch
-
-Data
-Pandas, NumPy, SQL
-
-ML Engineering
-FastAPI, Docker, Git, APIs
-
-AI
-LLMs, RAG, NLP, Computer Vision, Edge AI
-
-Do not use oversized progress bars showing fake percentages.
-
-Use clean tags, text, or minimal visual indicators instead.
-
-EXPERIENCE / EDUCATION
-
-Create clean timeline-style sections for relevant experience and education.
-
-Keep them visually minimal.
-
-CERTIFICATIONS
-
-Create a clean certifications section.
-
-Each certification should support a clickable verification link where available.
-
-The links should open the actual certification/verification page.
-
-CONTACT SECTION
-
-Create a simple final contact section.
-
-Include:
-
-"Let's build something intelligent."
-
-Include my email as a clickable link.
-
-The email must use:
-
-mailto:MY_EMAIL_ADDRESS
-
-Also include GitHub and LinkedIn links.
-
-NAVIGATION
-
-Create a minimal sticky navigation bar.
-
-Navigation:
-
-Home
-About
-Projects
-Skills
-Experience
-Contact
-
-The navigation should smoothly scroll to each section.
-
-On mobile, use a clean hamburger menu.
-
-ANIMATION PRINCIPLES
-
-Animations should be:
-
-Smooth
-
-Fast enough to feel responsive
-
-Subtle
-
-Purposeful
-
-Use scroll-triggered animations for section entrances.
-
-The Projects section should have the most sophisticated animation because it is the centerpiece of the portfolio.
-
-Respect prefers-reduced-motion accessibility settings.
-
-If the user has reduced motion enabled, provide a simpler non-animated project layout.
-
-RESPONSIVENESS
-
-The website must work beautifully on:
-
-Desktop
-
-Laptop
-
-Tablet
-
-Mobile
-
-The stacked project animation should be adapted for mobile rather than simply breaking the layout.
-
-Make sure cards do not overlap important text or become difficult to read on small screens.
-
-CODE QUALITY
-
-Use reusable components.
-
-Keep project information separate from presentation components.
-
-Create reusable components for:
-
-Navigation
-
-Project cards
-
-Project stack
-
-Skills
-
-Certifications
-
-Contact
-
-Keep all external links in a centralized configuration/data structure where practical.
-
-Do not hardcode fake URLs.
-
-Use semantic HTML and accessible buttons/links.
-
-Optimize the site for performance.
-
-The final result should feel like a high-end minimalist ML Engineer portfolio: simple, professional, technically impressive, and memorable without being visually noisy. 
-i will like to combine thsi two palattes in this design
-
-This project was built with [Lovable](https://lovable.dev).
-
-**Live app**: https://kocknetemmanuella-portfolio.lovable.app
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/bfe73592-3575-48e5-adba-a54756a26751).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
+```bash
 npm run dev
 ```
+
+The application will then be available at the local development URL provided by the development server.
+
+## 📜 Certifications
+
+The portfolio includes certifications in areas including:
+
+* Machine Learning
+* Data Science
+* Python
+* SQL
+* Artificial Intelligence
+* Embedded Engineering
+
+## 📫 Contact
+
+**Kocknet Emmanuella**
+
+* GitHub: https://github.com/Ellarh101
+* LinkedIn: https://www.linkedin.com/in/kocknet-emmanuella-86aa69356
+
+For professional opportunities, collaborations, or machine learning projects, feel free to connect with me.
+
+---
+
+© 2026 Kocknet Emmanuella. All rights reserved.
