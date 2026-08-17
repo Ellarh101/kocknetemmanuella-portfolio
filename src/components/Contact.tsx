@@ -76,7 +76,7 @@ export function Contact() {
             </a>
           </div>
           <p className="mt-4 text-sm text-muted-foreground">
-            Based in {profile.location} · Open to Machine Learning Engineer roles
+            Open to remote Machine Learning Engineer roles
           </p>
         </Reveal>
 
