@@ -1,4 +1,4 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Mail, Github, Linkedin, FileText } from "lucide-react";
 import { profile, mailtoHref, gmailComposeHref } from "@/data/site";
 import { Reveal } from "./Reveal";
 
