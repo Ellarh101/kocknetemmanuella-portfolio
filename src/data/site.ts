@@ -18,7 +18,7 @@ export const profile = {
   location: "Abuja, Nigeria",
   email: "kocknetemmanuella55@gmail.com",
   github: "https://github.com/Ellarh101",
-  linkedin: "https://www.linkedin.com/in/kocknet-emmanuella",
+  linkedin: "https://linkedin.com/in/kocknet-emmanuella/",
   headshot: headshotAsset.url,
   headshotAlt: "Portrait of Kocknet Emmanuella, Machine Learning Engineer",
   resume: resumeAsset.url,
