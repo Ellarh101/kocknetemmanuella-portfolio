@@ -1,4 +1,4 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Mail, Github, Linkedin, FileText } from "lucide-react";
 import { profile, mailtoHref, gmailComposeHref } from "@/data/site";
 import { Reveal } from "./Reveal";
 
@@ -80,8 +80,46 @@ export function Contact() {
           </p>
         </Reveal>
 
+        <Reveal delay={220}>
+          <div className="mt-12 flex flex-wrap items-center justify-center gap-4">
+            <a
+              href={mailtoHref}
+              aria-label="Send email"
+              className="flex h-12 w-12 items-center justify-center rounded-full border border-gold/40 bg-gold/5 text-gold-soft transition-all hover:scale-110 hover:bg-gold/10 hover:text-gold"
+            >
+              <Mail size={22} />
+            </a>
+            <a
+              href={profile.github}
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="GitHub"
+              className="flex h-12 w-12 items-center justify-center rounded-full border border-gold/40 bg-gold/5 text-gold-soft transition-all hover:scale-110 hover:bg-gold/10 hover:text-gold"
+            >
+              <Github size={22} />
+            </a>
+            <a
+              href={profile.linkedin}
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="LinkedIn"
+              className="flex h-12 w-12 items-center justify-center rounded-full border border-gold/40 bg-gold/5 text-gold-soft transition-all hover:scale-110 hover:bg-gold/10 hover:text-gold"
+            >
+              <Linkedin size={22} />
+            </a>
+            <a
+              href={profile.resume}
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="View CV"
+              className="flex h-12 w-12 items-center justify-center rounded-full border border-gold/40 bg-gold/5 text-gold-soft transition-all hover:scale-110 hover:bg-gold/10 hover:text-gold"
+            >
+              <FileText size={22} />
+            </a>
+          </div>
+        </Reveal>
 
-        <p className="mt-14 text-xs text-muted-foreground">
+        <p className="mt-10 text-center text-xs text-muted-foreground">
           &copy; {new Date().getFullYear()} {profile.name}
         </p>
 
