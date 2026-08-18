@@ -14,8 +14,8 @@ export function Timeline({ title, items }: { title: string; items: TimelineItem[
             <div className="relative pb-9 pl-6 last:pb-0">
               <span className="absolute top-1.5 -left-[4.5px] h-2 w-2 rounded-full bg-gold" />
               <p className="eyebrow-plain">{item.period}</p>
-              <p className="mt-2 text-base font-semibold text-foreground">{item.title}</p>
-              <p className="text-sm text-ash/80">{item.org}</p>
+              <p className="mt-2 text-base font-semibold text-foreground">{item.org}</p>
+              <p className="text-sm text-ash/80">{item.title}</p>
 
               <p className="mt-2 max-w-xl text-sm leading-relaxed text-muted-foreground">
                 {item.detail}
