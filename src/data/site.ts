@@ -1,16 +1,3 @@
-import ibmCert from "@/assets/ibm-data-science.pdf.asset.json";
-import supervisedMlCert from "@/assets/supervised-ml.pdf.asset.json";
-import sqlCert from "@/assets/intro-to-sql.png.asset.json";
-import aiFluencyCert from "@/assets/ai-fluency-anthropic.pdf.asset.json";
-import pythonAdvancedCert from "@/assets/python-advanced.pdf.asset.json";
-import pythonBeginnerCert from "@/assets/python-beginners-nitda.pdf.asset.json";
-import predictiveMaintenanceImg from "@/assets/predictive-maintenance-app.jpeg.asset.json";
-import headshotAsset from "@/assets/kocknet-headshot.png.asset.json";
-import resumeAsset from "@/assets/kocknet-resume.pdf.asset.json";
-import mechatronicTutorImg from "@/assets/mechatronic-tutor-device.png.asset.json";
-import doc2speechImg from "@/assets/doc2speech-translator.png.asset.json";
-import fruitClassifierImg from "@/assets/fruit-classification-output.png.asset.json";
-
 export const profile = {
   name: "Kocknet Emmanuella",
   role: "Machine Learning Engineer",
@@ -19,9 +6,9 @@ export const profile = {
   email: "kocknetemmanuella55@gmail.com",
   github: "https://github.com/Ellarh101",
   linkedin: "https://linkedin.com/in/kocknet-emmanuella/",
-  headshot: headshotAsset.url,
+  headshot: "/kocknet-headshot.png",
   headshotAlt: "Portrait of Kocknet Emmanuella, Machine Learning Engineer",
-  resume: resumeAsset.url,
+  resume: "/Kocknet-Emmanuella-Resume.pdf",
 };
 
 export const summary =
@@ -34,7 +21,6 @@ export const mailtoHref = `mailto:${profile.email}?subject=${encodeURIComponent(
 export const gmailComposeHref = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
   profile.email,
 )}`;
-
 
 export type Project = {
   title: string;
@@ -55,7 +41,7 @@ export const projects: Project[] = [
     tech: ["Python", "LSTM", "CatBoost", "SHAP", "FastAPI", "Flutter"],
     github: "https://github.com/Ellarh101/Predictive-maintenance-ml",
     accentLabel: "Predictive Maintenance",
-    image: predictiveMaintenanceImg.url,
+    image: "/predictive-maintenance-app.jpeg",
     imageAlt:
       "Predictive Maintenance mobile app listing monitored aircraft engines with health filters",
   },
@@ -67,11 +53,10 @@ export const projects: Project[] = [
     github:
       "https://github.com/abelbajeh/Mechatronics-tutor-with-edge-AI-capability",
     accentLabel: "Edge AI",
-    image: mechatronicTutorImg.url,
+    image: "/Mechatronic Tutor device.png",
     imageAlt:
       "3D-printed blue enclosure housing the Mechatronic Tutor's Raspberry Pi and touchscreen",
   },
-
   {
     title: "Document to Speech Converter",
     description:
@@ -79,7 +64,7 @@ export const projects: Project[] = [
     tech: ["Python", "NLP", "TTS", "Document Parsing"],
     github: "https://github.com/Ellarh101/Document-to-speech-converter",
     accentLabel: "Speech & NLP",
-    image: doc2speechImg.url,
+    image: "/doc2speech-translator.png",
     imageAlt:
       "Doc2Speech Translator desktop app translating text and offering online or offline text-to-speech",
   },
@@ -90,11 +75,10 @@ export const projects: Project[] = [
     tech: ["Python", "TensorFlow", "CNN", "Computer Vision"],
     github: "https://github.com/Ellarh101/Fruit-classifation-model",
     accentLabel: "Computer Vision",
-    image: fruitClassifierImg.url,
+    image: "/fruit_classification_output.png",
     imageAlt:
       "Grid of fruit images with the model's predicted versus true labels for kiwi, pineapple and cherry",
   },
-
 ];
 
 export const skillGroups = [
@@ -130,7 +114,14 @@ export const skillGroups = [
   },
   {
     label: "MLOps / Deployment",
-    items: ["Model Deployment", "REST APIs", "FastAPI", "Docker", "CI/CD", "ML Pipelines"],
+    items: [
+      "Model Deployment",
+      "REST APIs",
+      "FastAPI",
+      "Docker",
+      "CI/CD",
+      "ML Pipelines",
+    ],
   },
 ];
 
@@ -169,9 +160,6 @@ export const education: TimelineItem[] = [
   },
 ];
 
-
-
-
 export type Certification = {
   title: string;
   issuer: string;
@@ -185,42 +173,47 @@ export const certifications: Certification[] = [
     title: "Supervised Machine Learning: Regression and Classification",
     issuer: "DeepLearning.AI & Stanford University — Coursera",
     date: "Mar 2026",
-    fileUrl: supervisedMlCert.url,
+    fileUrl:
+      "/certificates/Supervised ML course certificate.pdf",
     kind: "pdf",
   },
   {
     title: "IBM Data Science",
     issuer: "IBM — Coursera",
-    fileUrl: ibmCert.url,
+    fileUrl:
+      "/certificates/IBM Data Science course certificate.pdf",
     kind: "pdf",
   },
   {
     title: "AI Fluency",
     issuer: "Anthropic",
-    fileUrl: aiFluencyCert.url,
+    fileUrl:
+      "/certificates/AI Fluency by Anthropic.pdf",
     kind: "pdf",
   },
   {
     title: "Python (Advanced)",
     issuer: "NITDA",
-    fileUrl: pythonAdvancedCert.url,
+    fileUrl:
+      "/certificates/Python Advanced certificate .pdf",
     kind: "pdf",
   },
   {
     title: "Python (Beginners)",
     issuer: "NITDA",
-    fileUrl: pythonBeginnerCert.url,
+    fileUrl:
+      "/certificates/Python Beginners NITDA Certificate1 .pdf",
     kind: "pdf",
   },
   {
     title: "Intro to SQL",
     issuer: "Kaggle",
     date: "Jul 2025",
-    fileUrl: sqlCert.url,
+    fileUrl:
+      "/certificates/Kocknet Emmanuella - Intro to SQL.png",
     kind: "image",
   },
 ];
-
 
 export const navLinks = [
   { label: "Home", href: "#home" },
