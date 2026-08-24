@@ -45,6 +45,7 @@ export const projects: Project[] = [
     imageAlt:
       "Predictive Maintenance mobile app listing monitored aircraft engines with health filters",
   },
+
   {
     title: "Mechatronic Tutor",
     description:
@@ -57,6 +58,7 @@ export const projects: Project[] = [
     imageAlt:
       "3D-printed blue enclosure housing the Mechatronic Tutor's Raspberry Pi and touchscreen",
   },
+
   {
     title: "Document to Speech Converter",
     description:
@@ -64,10 +66,11 @@ export const projects: Project[] = [
     tech: ["Python", "NLP", "TTS", "Document Parsing"],
     github: "https://github.com/Ellarh101/Document-to-speech-converter",
     accentLabel: "Speech & NLP",
-    image: "/doc2speech-translator.png",
+    image: "/document to speech coverter.png",
     imageAlt:
       "Doc2Speech Translator desktop app translating text and offering online or offline text-to-speech",
   },
+
   {
     title: "Fruit Classification Model",
     description:
@@ -99,6 +102,7 @@ export const skillGroups = [
       "CatBoost",
     ],
   },
+
   {
     label: "Data",
     items: [
@@ -112,6 +116,7 @@ export const skillGroups = [
       "Data Visualization",
     ],
   },
+
   {
     label: "MLOps / Deployment",
     items: [
@@ -141,6 +146,7 @@ export const experience: TimelineItem[] = [
     detail:
       "Built and evaluated ML models with Python, Scikit-learn, and TensorFlow for engineering datasets. Applied data preprocessing, feature engineering, and EDA to real-world AI solutions while integrating software with embedded hardware and microcontrollers.",
   },
+
   {
     period: "Jul 2024 – Sep 2024",
     title: "Intern — Artificial Intelligence & Data Science",
@@ -173,44 +179,43 @@ export const certifications: Certification[] = [
     title: "Supervised Machine Learning: Regression and Classification",
     issuer: "DeepLearning.AI & Stanford University — Coursera",
     date: "Mar 2026",
-    fileUrl:
-      "/certificates/Supervised ML course certificate.pdf",
+    fileUrl: "/certificates/Supervised ML course certificate.pdf",
     kind: "pdf",
   },
+
   {
     title: "IBM Data Science",
     issuer: "IBM — Coursera",
-    fileUrl:
-      "/certificates/IBM Data Science course certificate.pdf",
+    fileUrl: "/certificates/IBM Data Science course certificate.pdf",
     kind: "pdf",
   },
+
   {
     title: "AI Fluency",
     issuer: "Anthropic",
-    fileUrl:
-      "/certificates/AI Fluency by Anthropic.pdf",
+    fileUrl: "/certificates/AI Fluency by Anthropic.pdf",
     kind: "pdf",
   },
+
   {
     title: "Python (Advanced)",
     issuer: "NITDA",
-    fileUrl:
-      "/certificates/Python Advanced certificate .pdf",
+    fileUrl: "/certificates/Python Advanced certificate .pdf",
     kind: "pdf",
   },
+
   {
     title: "Python (Beginners)",
     issuer: "NITDA",
-    fileUrl:
-      "/certificates/Python Beginners NITDA Certificate1 .pdf",
+    fileUrl: "/certificates/Python Beginners NITDA Certificate1 .pdf",
     kind: "pdf",
   },
+
   {
     title: "Intro to SQL",
     issuer: "Kaggle",
     date: "Jul 2025",
-    fileUrl:
-      "/certificates/Kocknet Emmanuella - Intro to SQL.png",
+    fileUrl: "/certificates/Kocknet Emmanuella - Intro to SQL.png",
     kind: "image",
   },
 ];
