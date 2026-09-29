@@ -1,3 +1,5 @@
+import advancedLearningAlgorithmsCertificate from "@/assets/advanced-learning-algorithms.pdf.asset.json";
+
 export const profile = {
   name: "Kocknet Emmanuella",
   role: "Machine Learning Engineer",
@@ -90,6 +92,10 @@ export const skillGroups = [
     items: [
       "Supervised Learning",
       "Unsupervised Learning",
+      "Decision Trees",
+      "Random Forest",
+      "Artificial Neural Networks",
+      "PyTorch",
       "Feature Engineering",
       "Model Evaluation",
       "Hyperparameter Tuning",
@@ -175,6 +181,14 @@ export type Certification = {
 };
 
 export const certifications: Certification[] = [
+  {
+    title: "Advanced Learning Algorithms",
+    issuer: "DeepLearning.AI & Stanford Online — Coursera",
+    date: "Sep 2026",
+    fileUrl: advancedLearningAlgorithmsCertificate.url,
+    kind: "pdf",
+  },
+
   {
     title: "Supervised Machine Learning: Regression and Classification",
     issuer: "DeepLearning.AI & Stanford University — Coursera",
