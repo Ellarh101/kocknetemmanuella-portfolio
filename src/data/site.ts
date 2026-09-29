@@ -1,5 +1,3 @@
-import advancedLearningAlgorithmsCertificate from "@/assets/advanced-learning-algorithms.pdf.asset.json";
-
 export const profile = {
   name: "Kocknet Emmanuella",
   role: "Machine Learning Engineer",
@@ -185,7 +183,7 @@ export const certifications: Certification[] = [
     title: "Advanced Learning Algorithms",
     issuer: "DeepLearning.AI & Stanford Online — Coursera",
     date: "Sep 2026",
-    fileUrl: advancedLearningAlgorithmsCertificate.url,
+    fileUrl: "/certificates/advanced-learning-algorithms.pdf",
     kind: "pdf",
   },
 
