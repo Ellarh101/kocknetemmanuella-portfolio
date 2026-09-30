@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowUpRight, ArrowLeft, FileText, Download } from "lucide-react";
-import { certifications, profile, mailtoHref } from "@/data/site";
+import { ArrowUpRight, ArrowLeft, Download } from "lucide-react";
+import { useState } from "react";
+import { certifications, profile, mailtoHref, type Certification } from "@/data/site";
+import { CertificateViewer } from "@/components/CertificateViewer";
 import { Reveal } from "@/components/Reveal";
 
 const title = "Certificates — Kocknet Emmanuella";
@@ -22,6 +24,7 @@ export const Route = createFileRoute("/certificates")({
 });
 
 function CertificatesPage() {
+  const [open, setOpen] = useState<Certification | null>(null);
   return (
     <main className="mx-auto max-w-5xl px-5 py-24 sm:px-8 sm:py-32">
       <Link to="/" className="link-arrow text-sm">
@@ -44,18 +47,19 @@ function CertificatesPage() {
           <Reveal key={c.title} delay={i * 70}>
             <article className="surface flex h-full flex-col overflow-hidden rounded-xl transition-colors hover:border-gold/50">
               <div className="aspect-[16/10] w-full overflow-hidden border-b border-border bg-graphite/40">
-                {c.kind === "image" ? (
+                <button
+                  type="button"
+                  onClick={() => setOpen(c)}
+                  className="block h-full w-full cursor-pointer"
+                  aria-label={`View ${c.title} certificate`}
+                >
                   <img
-                    src={c.fileUrl}
+                    src={c.previewUrl}
                     alt={`${c.title} certificate issued by ${c.issuer}`}
                     loading="lazy"
-                    className="h-full w-full object-cover object-top"
+                    className="h-full w-full object-cover object-top transition-transform duration-300 hover:scale-[1.02]"
                   />
-                ) : (
-                  <div className="grid h-full w-full place-items-center text-gold/70">
-                    <FileText size={40} strokeWidth={1.2} />
-                  </div>
-                )}
+                </button>
               </div>
               <div className="flex flex-1 flex-col p-5">
                 <h2 className="text-base font-semibold text-foreground">{c.title}</h2>
@@ -64,12 +68,13 @@ function CertificatesPage() {
                   <p className="mt-1 text-xs text-muted-foreground">{c.date}</p>
                 )}
                 <div className="mt-4 flex flex-wrap items-center gap-4 pt-1">
-                  <a
-                    href={c.fileUrl}
-                    className="link-arrow text-sm"
+                  <button
+                    type="button"
+                    onClick={() => setOpen(c)}
+                    className="link-arrow cursor-pointer text-sm"
                   >
-                    Open <ArrowUpRight size={14} />
-                  </a>
+                    View <ArrowUpRight size={14} />
+                  </button>
                   <a
                     href={c.fileUrl}
                     download
@@ -99,6 +104,7 @@ function CertificatesPage() {
           </p>
         </div>
       </Reveal>
+      <CertificateViewer cert={open} onClose={() => setOpen(null)} />
     </main>
   );
 }
