@@ -175,6 +175,8 @@ export type Certification = {
   issuer: string;
   date?: string;
   fileUrl: string;
+  /** Image shown in the on-page viewer (avoids browser PDF blocking). */
+  previewUrl: string;
   kind: "pdf" | "image";
 };
 
@@ -184,6 +186,7 @@ export const certifications: Certification[] = [
     issuer: "DeepLearning.AI & Stanford Online — Coursera",
     date: "Sep 2026",
     fileUrl: "/certificates/advanced-learning-algorithms.pdf",
+    previewUrl: "/certificates/previews/advanced-learning-algorithms.jpg",
     kind: "pdf",
   },
 
@@ -192,6 +195,7 @@ export const certifications: Certification[] = [
     issuer: "DeepLearning.AI & Stanford University — Coursera",
     date: "Mar 2026",
     fileUrl: "/certificates/Supervised ML course certificate.pdf",
+    previewUrl: "/certificates/previews/supervised-ml-course-certificate.jpg",
     kind: "pdf",
   },
 
@@ -199,6 +203,7 @@ export const certifications: Certification[] = [
     title: "IBM Data Science",
     issuer: "IBM — Coursera",
     fileUrl: "/certificates/IBM Data Science course certificate.pdf",
+    previewUrl: "/certificates/previews/ibm-data-science-course-certificate.jpg",
     kind: "pdf",
   },
 
@@ -206,6 +211,7 @@ export const certifications: Certification[] = [
     title: "AI Fluency",
     issuer: "Anthropic",
     fileUrl: "/certificates/AI Fluency by Anthropic.pdf",
+    previewUrl: "/certificates/previews/ai-fluency-by-anthropic.jpg",
     kind: "pdf",
   },
 
@@ -213,6 +219,7 @@ export const certifications: Certification[] = [
     title: "Python (Advanced)",
     issuer: "NITDA",
     fileUrl: "/certificates/Python Advanced certificate .pdf",
+    previewUrl: "/certificates/previews/python-advanced-certificate.jpg",
     kind: "pdf",
   },
 
@@ -220,6 +227,7 @@ export const certifications: Certification[] = [
     title: "Python (Beginners)",
     issuer: "NITDA",
     fileUrl: "/certificates/Python Beginners NITDA Certificate1 .pdf",
+    previewUrl: "/certificates/previews/python-beginners-nitda-certificate1.jpg",
     kind: "pdf",
   },
 
@@ -228,6 +236,7 @@ export const certifications: Certification[] = [
     issuer: "Kaggle",
     date: "Jul 2025",
     fileUrl: "/certificates/Kocknet Emmanuella - Intro to SQL.png",
+    previewUrl: "/certificates/Kocknet Emmanuella - Intro to SQL.png",
     kind: "image",
   },
 ];
