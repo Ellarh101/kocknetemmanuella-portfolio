@@ -1,9 +1,12 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowUpRight, FileText, Image as ImageIcon } from "lucide-react";
-import { certifications } from "@/data/site";
+import { useState } from "react";
+import { certifications, type Certification } from "@/data/site";
+import { CertificateViewer } from "./CertificateViewer";
 import { Reveal } from "./Reveal";
 
 export function Certifications() {
+  const [open, setOpen] = useState<Certification | null>(null);
   return (
     <section id="certifications" className="py-16 sm:py-24">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
@@ -21,9 +24,10 @@ export function Certifications() {
         <ul className="mt-8 grid gap-4 sm:grid-cols-2">
           {certifications.map((c, i) => (
             <Reveal as="li" key={c.title} delay={i * 70}>
-              <a
-                href={c.fileUrl}
-                className="surface group flex h-full items-start gap-4 rounded-xl p-5 transition-colors hover:border-gold/50"
+              <button
+                type="button"
+                onClick={() => setOpen(c)}
+                className="surface group flex h-full w-full cursor-pointer items-start text-left gap-4 rounded-xl p-5 transition-colors hover:border-gold/50"
               >
                 <span className="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-lg border border-gold/30 bg-gold/10 text-gold">
                   {c.kind === "pdf" ? <FileText size={17} /> : <ImageIcon size={17} />}
@@ -42,7 +46,7 @@ export function Certifications() {
                     View certificate <ArrowUpRight size={13} />
                   </span>
                 </span>
-              </a>
+              </button>
             </Reveal>
           ))}
         </ul>
@@ -53,6 +57,7 @@ export function Certifications() {
           </Link>
         </Reveal>
       </div>
+      <CertificateViewer cert={open} onClose={() => setOpen(null)} />
     </section>
   );
 }
