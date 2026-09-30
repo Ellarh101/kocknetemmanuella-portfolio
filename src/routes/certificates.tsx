@@ -66,8 +66,6 @@ function CertificatesPage() {
                 <div className="mt-4 flex flex-wrap items-center gap-4 pt-1">
                   <a
                     href={c.fileUrl}
-                    target="_blank"
-                    rel="noreferrer noopener"
                     className="link-arrow text-sm"
                   >
                     Open <ArrowUpRight size={14} />
