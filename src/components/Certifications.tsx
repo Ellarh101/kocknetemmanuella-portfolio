@@ -23,8 +23,6 @@ export function Certifications() {
             <Reveal as="li" key={c.title} delay={i * 70}>
               <a
                 href={c.fileUrl}
-                target="_blank"
-                rel="noreferrer noopener"
                 className="surface group flex h-full items-start gap-4 rounded-xl p-5 transition-colors hover:border-gold/50"
               >
                 <span className="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-lg border border-gold/30 bg-gold/10 text-gold">
