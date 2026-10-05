@@ -182,6 +182,16 @@ export type Certification = {
 
 export const certifications: Certification[] = [
   {
+    title: "AWS ML Engineer Associate Curriculum Overview",
+    issuer: "AWS Training & Certification",
+    date: "Oct 2026",
+    fileUrl: "/certificates/aws-ml-engineer-associate-curriculum-overview.pdf",
+    previewUrl:
+      "/certificates/previews/aws-ml-engineer-associate-curriculum-overview.jpg",
+    kind: "pdf",
+  },
+
+  {
     title: "Advanced Learning Algorithms",
     issuer: "DeepLearning.AI & Stanford Online — Coursera",
     date: "Sep 2026",
