@@ -88,8 +88,13 @@ export const skillGroups = [
   {
     label: "Machine Learning",
     items: [
+      "Business Analytics",
+      "Responsible AI/ML",
       "Supervised Learning",
       "Unsupervised Learning",
+      "Deep Learning",
+      "Reinforcement Learning",
+      "Generative AI",
       "Decision Trees",
       "Random Forest",
       "Artificial Neural Networks",
