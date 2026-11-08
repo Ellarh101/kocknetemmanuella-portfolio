@@ -1,5 +1,7 @@
 import { ArrowUpRight, Mail, Github, Linkedin, FileText } from "lucide-react";
-import { profile, mailtoHref, gmailComposeHref } from "@/data/site";
+import { Button } from "@/components/ui/button";
+import { ContactFormDialog } from "@/components/ContactFormDialog";
+import { profile, gmailComposeHref } from "@/data/site";
 import { Reveal } from "./Reveal";
 
 export function Contact() {
@@ -21,12 +23,14 @@ export function Contact() {
         </Reveal>
 
         <Reveal delay={90}>
-          <a
-            href={mailtoHref}
-            className="mt-8 inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/5 px-5 py-3 font-display text-base font-medium break-all text-gold-soft transition-colors hover:bg-gold/10 sm:text-xl"
-          >
-            {profile.email} <ArrowUpRight size={20} />
-          </a>
+          <ContactFormDialog>
+            <Button
+              variant="outline"
+              className="mt-8 h-auto max-w-full whitespace-normal break-all rounded-full border-gold/40 bg-gold/5 px-5 py-3 text-left font-display text-base font-medium text-gold-soft hover:bg-gold/10 sm:text-xl"
+            >
+              {profile.email} <ArrowUpRight size={20} />
+            </Button>
+          </ContactFormDialog>
           <p className="mt-3 text-xs text-muted-foreground">
             No mail app?{" "}
             <a
@@ -76,19 +80,22 @@ export function Contact() {
             </a>
           </div>
           <p className="mt-4 text-sm text-muted-foreground">
-            Open to remote Machine Learning Engineer roles
+            Open to ML Engineer roles and NYSC PPA placement in Port Harcourt, Rivers State
           </p>
         </Reveal>
 
         <Reveal delay={220}>
           <div className="mt-12 flex flex-wrap items-center justify-center gap-4">
-            <a
-              href={mailtoHref}
-              aria-label="Send email"
-              className="flex h-12 w-12 items-center justify-center rounded-full border border-gold/40 bg-gold/5 text-gold-soft transition-all hover:scale-110 hover:bg-gold/10 hover:text-gold"
-            >
-              <Mail size={22} />
-            </a>
+            <ContactFormDialog>
+              <Button
+                variant="outline"
+                size="icon"
+                aria-label="Send email"
+                className="h-12 w-12 rounded-full border-gold/40 bg-gold/5 text-gold-soft transition-all hover:scale-110 hover:bg-gold/10 hover:text-gold"
+              >
+                <Mail size={22} />
+              </Button>
+            </ContactFormDialog>
             <a
               href={profile.github}
               target="_blank"

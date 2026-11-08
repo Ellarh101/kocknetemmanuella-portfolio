@@ -1,5 +1,7 @@
 import { ArrowUpRight, FileText } from "lucide-react";
-import { profile, mailtoHref, summary } from "@/data/site";
+import { Button } from "@/components/ui/button";
+import { ContactFormDialog } from "@/components/ContactFormDialog";
+import { profile, summary } from "@/data/site";
 
 const marks = [
   "Data pipelines",
@@ -77,12 +79,11 @@ export function Hero() {
           className="mt-9 flex animate-fade-in flex-wrap items-center gap-x-6 gap-y-4"
           style={{ animationDelay: "360ms", animationFillMode: "backwards" }}
         >
-          <a
-            href={mailtoHref}
-            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-primary to-gold px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5"
-          >
-            Email me <ArrowUpRight size={15} />
-          </a>
+          <ContactFormDialog>
+            <Button className="rounded-full bg-gradient-to-r from-primary to-gold px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5">
+              Email me <ArrowUpRight size={15} />
+            </Button>
+          </ContactFormDialog>
           <a
             href="#projects"
             className="inline-flex items-center gap-2 rounded-full border border-gold/40 px-5 py-2.5 text-sm font-medium text-gold-soft transition-colors hover:bg-gold/10"
