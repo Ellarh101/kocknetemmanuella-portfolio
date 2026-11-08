@@ -17,9 +17,11 @@ export function Timeline({ title, items }: { title: string; items: TimelineItem[
               <p className="mt-2 text-base font-semibold text-foreground">{item.org}</p>
               <p className="text-sm text-ash/80">{item.title}</p>
 
-              <p className="mt-2 max-w-xl text-sm leading-relaxed text-muted-foreground">
-                {item.detail}
-              </p>
+              {item.detail && (
+                <p className="mt-2 max-w-xl text-sm leading-relaxed text-muted-foreground">
+                  {item.detail}
+                </p>
+              )}
               {item.link && (
                 <a
                   href={item.link}

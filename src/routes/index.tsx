@@ -49,6 +49,13 @@ function Index() {
                 embedded hardware.
               </p>
             </Reveal>
+            <Reveal delay={110}>
+              <p className="mt-5 max-w-3xl text-base leading-relaxed text-foreground/75 sm:text-lg">
+                My Mechatronics background means I build for real equipment and real data:
+                predictive maintenance, sensor monitoring, automation and edge AI. These
+                skills apply directly to oil and gas operations.
+              </p>
+            </Reveal>
             <Reveal delay={140}>
               <div className="mt-8 grid gap-3 sm:grid-cols-3">
                 {[

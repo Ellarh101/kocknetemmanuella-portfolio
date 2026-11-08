@@ -149,6 +149,12 @@ export type TimelineItem = {
 
 export const experience: TimelineItem[] = [
   {
+    period: "Oct 2026 – Present",
+    title: "Machine Learning Intern",
+    org: "FlyRank AI",
+    detail: "Completed Anthropic's Claude 101 course as part of the internship.",
+  },
+  {
     period: "Mar 2025 – Oct 2025",
     title: "Intern — Machine Learning & Embedded Systems",
     org: "National Centre for Artificial Intelligence and Robotics (NCAIR)",
@@ -168,10 +174,16 @@ export const experience: TimelineItem[] = [
 export const education: TimelineItem[] = [
   {
     period: "2026",
-    title: "B.Eng. Mechatronics Engineering",
+    title: "B.Eng. Mechatronics Engineering, CGPA 4.20/5.00, Second Class Upper",
     org: "Air Force Institute of Technology (AFIT), Kaduna, Nigeria",
     detail:
       "Engineering foundation across control systems, electronics and embedded systems, supporting the development of machine learning solutions for real-world hardware.",
+  },
+  {
+    period: "Oct 31, 2026 – Present",
+    title: "AI & Automation course",
+    org: "TS Academy",
+    detail: "",
   },
 ];
 
