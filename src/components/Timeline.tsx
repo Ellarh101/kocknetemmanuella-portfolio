@@ -13,6 +13,11 @@ export function Timeline({ title, items }: { title: string; items: TimelineItem[
           <Reveal as="li" key={item.title + item.period} delay={i * 70}>
             <div className="relative pb-9 pl-6 last:pb-0">
               <span className="absolute top-1.5 -left-[4.5px] h-2 w-2 rounded-full bg-gold" />
+              {item.label && (
+                <p className="mb-2 inline-flex rounded-sm border border-primary/40 bg-primary/10 px-2 py-1 font-mono text-[0.65rem] text-primary">
+                  {item.label}
+                </p>
+              )}
               <p className="eyebrow-plain">{item.period}</p>
               <p className="mt-2 text-base font-semibold text-foreground">{item.org}</p>
               <p className="text-sm text-ash/80">{item.title}</p>

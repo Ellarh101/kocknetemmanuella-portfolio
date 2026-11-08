@@ -12,17 +12,35 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { profile } from "@/data/site";
+import { z } from "zod";
+
+const contactMessageSchema = z.object({
+  name: z.string().trim().min(1, "Enter your name.").max(100),
+  email: z.string().trim().email("Enter a valid email address.").max(255),
+  message: z.string().trim().min(1, "Enter a message.").max(1200),
+});
 
 export function ContactFormDialog({ children }: { children: ReactNode }) {
   const [open, setOpen] = useState(false);
+  const [error, setError] = useState("");
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
     const formData = new FormData(event.currentTarget);
-    const name = String(formData.get("name") ?? "").trim();
-    const email = String(formData.get("email") ?? "").trim();
-    const message = String(formData.get("message") ?? "").trim();
+    const parsed = contactMessageSchema.safeParse({
+      name: formData.get("name"),
+      email: formData.get("email"),
+      message: formData.get("message"),
+    });
+
+    if (!parsed.success) {
+      setError(parsed.error.issues[0]?.message ?? "Check your details and try again.");
+      return;
+    }
+
+    setError("");
+    const { name, email, message } = parsed.data;
     const subject = `Portfolio message from ${name}`;
     const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
     const mailto = `mailto:${profile.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
@@ -63,6 +81,11 @@ export function ContactFormDialog({ children }: { children: ReactNode }) {
             <Label htmlFor="contact-message">Message</Label>
             <Textarea id="contact-message" name="message" rows={5} maxLength={1200} required />
           </div>
+          {error && (
+            <p role="alert" className="text-sm text-destructive">
+              {error}
+            </p>
+          )}
           <Button type="submit" className="justify-self-start">
             Open email draft
           </Button>

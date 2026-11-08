@@ -145,6 +145,7 @@ export type TimelineItem = {
   org: string;
   detail: string;
   link?: string;
+  label?: string;
 };
 
 export const experience: TimelineItem[] = [
@@ -174,7 +175,7 @@ export const experience: TimelineItem[] = [
 export const education: TimelineItem[] = [
   {
     period: "2026",
-    title: "B.Eng. Mechatronics Engineering, CGPA 4.20/5.00, Second Class Upper",
+    title: "B.Eng. Mechatronics Engineering, CGPA 4.20/5.00, Second Class Upper, 2026",
     org: "Air Force Institute of Technology (AFIT), Kaduna, Nigeria",
     detail:
       "Engineering foundation across control systems, electronics and embedded systems, supporting the development of machine learning solutions for real-world hardware.",
@@ -183,7 +184,8 @@ export const education: TimelineItem[] = [
     period: "Oct 31, 2026 – Present",
     title: "AI & Automation course",
     org: "TS Academy",
-    detail: "",
+    detail: "In progress",
+    label: "Training",
   },
 ];
 
