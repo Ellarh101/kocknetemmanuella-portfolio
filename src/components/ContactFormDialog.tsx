@@ -45,7 +45,7 @@ export function ContactFormDialog({ children }: { children: ReactNode }) {
     const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
     const mailto = `mailto:${profile.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-    window.location.href = mailto;
+    window.open(mailto, "_self");
     setOpen(false);
   }
 

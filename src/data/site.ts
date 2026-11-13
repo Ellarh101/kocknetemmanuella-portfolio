@@ -175,7 +175,7 @@ export const experience: TimelineItem[] = [
 export const education: TimelineItem[] = [
   {
     period: "2026",
-    title: "B.Eng. Mechatronics Engineering, CGPA 4.20/5.00, Second Class Upper, 2026",
+    title: "B.Eng. Mechatronics Engineering, CGPA 4.20/5.00, Second Class Upper",
     org: "Air Force Institute of Technology (AFIT), Kaduna, Nigeria",
     detail:
       "Engineering foundation across control systems, electronics and embedded systems, supporting the development of machine learning solutions for real-world hardware.",
