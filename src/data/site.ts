@@ -26,8 +26,10 @@ export type Project = {
   title: string;
   description: string;
   tech: string[];
-  github: string;
+  github?: string;
   demo?: string;
+  linkPlaceholder?: string;
+  meta?: string;
   accentLabel: string;
   image?: string;
   imageAlt?: string;
@@ -35,10 +37,19 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    title: "Postara — WhatsApp Reselling Assistant",
+    description:
+      "Watches vendor WhatsApp chats, rewrites captions with an AI helper (Gemini or Claude), reads prices and adds profit margins, then posts on a schedule to groups and status. Includes brand protection, price history tracking with CSV export, multi-user logins, and review-before-send.",
+    tech: ["Python", "LLM APIs", "Automation", "Docker", "Render"],
+    linkPlaceholder: "GitHub link coming soon",
+    meta: "v1.10.0 · Nov 2026",
+    accentLabel: "WhatsApp Automation",
+  },
+  {
     title: "Aircraft Engine Remaining Useful Life Prediction",
     description:
-      "End-to-end machine learning system for predicting the remaining useful life of aircraft engines using NASA C-MAPSS turbofan degradation data.",
-    tech: ["Python", "LSTM", "CatBoost", "SHAP", "FastAPI", "Flutter"],
+      "Benchmarked 5 models (Random Forest, XGBoost, LightGBM, CatBoost, LSTM) on NASA C-MAPSS. Deployed CatBoost for explainability with SHAP, behind a FastAPI backend with JWT auth and a Flutter mobile app showing live engine health.",
+    tech: ["Python", "LSTM", "CatBoost", "SHAP", "FastAPI", "Flutter", "SQLAlchemy", "JWT"],
     github: "https://github.com/Ellarh101/Predictive-maintenance-ml",
     accentLabel: "Predictive Maintenance",
     image: "/predictive-maintenance-app.jpeg",
@@ -81,6 +92,24 @@ export const projects: Project[] = [
     image: "/fruit_classification_output.png",
     imageAlt:
       "Grid of fruit images with the model's predicted versus true labels for kiwi, pineapple and cherry",
+  },
+];
+
+export const compactProjects: Project[] = [
+  {
+    title: "Emotion-Based Music Recommender",
+    description:
+      "Real-time facial emotion detection paired with Spotify recommendations.",
+    tech: ["Python", "Computer Vision", "Spotify API"],
+    github: "https://github.com/Ellarh101",
+    accentLabel: "Computer Vision",
+  },
+  {
+    title: "Customer Churn Prediction",
+    description: "End-to-end machine learning pipeline with MLOps tooling.",
+    tech: ["Python", "Machine Learning", "MLOps"],
+    github: "https://github.com/Ellarh101",
+    accentLabel: "MLOps",
   },
 ];
 
@@ -135,7 +164,19 @@ export const skillGroups = [
       "Docker",
       "CI/CD",
       "ML Pipelines",
+      "MLflow",
+      "Kubernetes",
+      "Vertex AI (GCP)",
+      "Flutter",
     ],
+  },
+  {
+    label: "Edge AI & Embedded",
+    items: ["Raspberry Pi 5", "ESP32", "ESP32-CAM", "Arduino", "On-device LLMs", "RAG"],
+  },
+  {
+    label: "Computer Vision",
+    items: ["OpenCV", "CNNs", "TensorFlow"],
   },
 ];
 
@@ -193,10 +234,11 @@ export type Certification = {
   title: string;
   issuer: string;
   date?: string;
-  fileUrl: string;
+  fileUrl?: string;
   /** Image shown in the on-page viewer (avoids browser PDF blocking). */
-  previewUrl: string;
+  previewUrl?: string;
   kind: "pdf" | "image";
+  pendingUpload?: boolean;
 };
 
 export const certifications: Certification[] = [
@@ -267,6 +309,42 @@ export const certifications: Certification[] = [
     fileUrl: "/certificates/Kocknet Emmanuella - Intro to SQL.png",
     previewUrl: "/certificates/Kocknet Emmanuella - Intro to SQL.png",
     kind: "image",
+  },
+  {
+    title: "Embedded Systems",
+    issuer: "NITDA / NCAIR",
+    kind: "pdf",
+    pendingUpload: true,
+  },
+  {
+    title: "AI Fluency for Small Businesses",
+    issuer: "Anthropic",
+    kind: "pdf",
+    pendingUpload: true,
+  },
+  {
+    title: "Claude 101",
+    issuer: "Anthropic",
+    kind: "pdf",
+    pendingUpload: true,
+  },
+  {
+    title: "Claude Code 101",
+    issuer: "Anthropic",
+    kind: "pdf",
+    pendingUpload: true,
+  },
+  {
+    title: "Introduction to Claude Cowork",
+    issuer: "Anthropic",
+    kind: "pdf",
+    pendingUpload: true,
+  },
+  {
+    title: "AI Capabilities and Limitations",
+    issuer: "Anthropic",
+    kind: "pdf',
+    pendingUpload: true,
   },
 ];
 
