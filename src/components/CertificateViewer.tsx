@@ -28,18 +28,29 @@ export function CertificateViewer({
                 {cert.date ? ` · ${cert.date}` : ""}
               </DialogDescription>
             </div>
-            <img
-              src={cert.previewUrl}
-              alt={`${cert.title} certificate issued by ${cert.issuer}`}
-              className="w-full rounded-lg border border-border bg-platinum object-contain"
-            />
-            <a
-              href={cert.fileUrl}
-              download
-              className="link-arrow justify-self-start text-sm"
-            >
-              Download original <Download size={14} />
-            </a>
+            {cert.pendingUpload ? (
+              <p className="rounded-md border border-border bg-secondary/40 p-5 text-sm text-muted-foreground">
+                The certificate file has not been uploaded yet. Its viewing and download
+                links will be available once you provide the file.
+              </p>
+            ) : (
+              cert.previewUrl && (
+                <img
+                  src={cert.previewUrl}
+                  alt={`${cert.title} certificate issued by ${cert.issuer}`}
+                  className="w-full rounded-lg border border-border bg-platinum object-contain"
+                />
+              )
+            )}
+            {cert.fileUrl && !cert.pendingUpload && (
+              <a
+                href={cert.fileUrl}
+                download
+                className="link-arrow justify-self-start text-sm"
+              >
+                Download original <Download size={14} />
+              </a>
+            )}
           </>
         )}
       </DialogContent>

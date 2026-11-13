@@ -1,4 +1,9 @@
 - [x] Update hero, about, AFIT education, and contact copy.
-- [x] Add FlyRank AI internship and TS Academy training entries while retaining both NCAIR entries.
+- [x] Add FlyRank AI and TS Academy entries while retaining both NCAIR entries.
 - [x] Replace portfolio email links with one form that opens a prefilled email draft.
-- [x] Verify all updated content, contact handoff, and clean preview status.
+- [ ] Add Postara and update Predictive Maintenance project details and tags.
+- [ ] Add Emotion-Based Music Recommender and Customer Churn Prediction compact project cards.
+- [ ] Expand skills with Edge AI & Embedded, Computer Vision, and requested tools.
+- [ ] Add six certificate placeholders that open an upload-pending view.
+- [ ] Replace the CV and verify view/download URLs.
+- [ ] Verify updated sections, asset responses, and clean preview status.

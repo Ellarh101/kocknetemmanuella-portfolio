@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { projects } from "@/data/site";
+import { compactProjects, projects } from "@/data/site";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
 import { ProjectCard } from "./ProjectCard";
 import { Reveal } from "./Reveal";
@@ -73,7 +73,7 @@ export function ProjectStack() {
         {header}
         <div className="mx-auto mt-12 grid max-w-6xl gap-6 px-5 sm:px-8">
           {projects.map((p, i) => (
-            <ProjectCard key={p.github} project={p} index={i} />
+            <ProjectCard key={p.title} project={p} index={i} />
           ))}
         </div>
       </section>
@@ -93,7 +93,7 @@ export function ProjectStack() {
             <div className="relative h-[26rem] sm:h-[24rem]">
               {projects.map((p, i) => (
                 <div
-                  key={p.github}
+                  key={p.title}
                   ref={(el) => {
                     cardRefs.current[i] = el;
                   }}
@@ -106,6 +106,36 @@ export function ProjectStack() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="mx-auto grid max-w-6xl gap-4 px-5 pb-16 sm:grid-cols-2 sm:px-8">
+        {compactProjects.map((project, index) => (
+          <article
+            key={project.title}
+            className="surface rounded-xl p-5 transition-colors hover:border-primary/50"
+          >
+            <div className="flex items-center gap-3">
+              <span className="eyebrow-plain text-primary">
+                {String(projects.length + index + 1).padStart(2, "0")}
+              </span>
+              <span className="h-px w-8 bg-gradient-to-r from-primary to-transparent" />
+              <span className="eyebrow-plain">{project.accentLabel}</span>
+            </div>
+            <h3 className="mt-4 text-lg font-semibold text-foreground">{project.title}</h3>
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+              {project.description}
+            </p>
+            <ul className="mt-4 flex flex-wrap gap-2">
+              {project.tech.map((tag) => (
+                <li
+                  key={tag}
+                  className="rounded-full border border-border bg-secondary/60 px-3 py-1 font-mono text-[0.7rem] text-secondary-foreground"
+                >
+                  {tag}
+                </li>
+              ))}
+            </ul>
+          </article>
+        ))}
       </div>
     </section>
   );
