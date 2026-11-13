@@ -16,8 +16,8 @@ export function Certifications() {
             Certifications
           </h2>
           <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-            Every certificate is hosted here directly — open or download the original
-            document, no external account required.
+            Open a certificate to view its hosted document. Additional files will be added
+            as they become available.
           </p>
         </Reveal>
 

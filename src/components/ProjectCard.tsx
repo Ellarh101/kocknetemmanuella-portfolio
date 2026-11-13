@@ -28,6 +28,9 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
         <h3 className="mt-5 text-xl font-semibold text-foreground sm:text-2xl lg:text-[1.75rem] lg:leading-tight">
           {project.title}
         </h3>
+        {project.meta && (
+          <p className="mt-2 font-mono text-xs text-primary">{project.meta}</p>
+        )}
 
         <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground sm:text-[0.95rem]">
           {project.description}
@@ -45,14 +48,16 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
         </ul>
 
         <div className="mt-auto flex flex-wrap items-center gap-6 pt-7">
-          <a
-            href={project.github}
-            target="_blank"
-            rel="noreferrer noopener"
-            className="link-arrow text-sm font-medium"
-          >
-            View on GitHub <ArrowUpRight size={15} />
-          </a>
+          {project.github && (
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noreferrer noopener"
+              className="link-arrow text-sm font-medium"
+            >
+              View on GitHub <ArrowUpRight size={15} />
+            </a>
+          )}
           {project.demo && (
             <a
               href={project.demo}
@@ -62,6 +67,9 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
             >
               Live demo <ArrowUpRight size={15} />
             </a>
+          )}
+          {project.linkPlaceholder && (
+            <span className="text-sm text-muted-foreground">{project.linkPlaceholder}</span>
           )}
         </div>
       </div>

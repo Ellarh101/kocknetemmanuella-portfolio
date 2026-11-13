@@ -39,8 +39,8 @@ function CertificatesPage() {
           Certificates
         </h1>
         <p className="mt-5 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-          Every credential in one place — hosted directly, so each document opens or
-          downloads without needing an external account.
+          Every credential in one place. Newly added certificates will be viewable here once
+          their files are uploaded.
         </p>
       </Reveal>
 
@@ -55,12 +55,18 @@ function CertificatesPage() {
                   className="block h-full w-full cursor-pointer"
                   aria-label={`View ${c.title} certificate`}
                 >
-                  <img
-                    src={c.previewUrl}
-                    alt={`${c.title} certificate issued by ${c.issuer}`}
-                    loading="lazy"
-                    className="h-full w-full object-cover object-top transition-transform duration-300 hover:scale-[1.02]"
-                  />
+                  {c.previewUrl ? (
+                    <img
+                      src={c.previewUrl}
+                      alt={`${c.title} certificate issued by ${c.issuer}`}
+                      loading="lazy"
+                      className="h-full w-full object-cover object-top transition-transform duration-300 hover:scale-[1.02]"
+                    />
+                  ) : (
+                    <span className="flex h-full items-center justify-center px-5 text-center text-sm text-muted-foreground">
+                      Certificate file pending
+                    </span>
+                  )}
                 </button>
               </div>
               <div className="flex flex-1 flex-col p-5">
@@ -77,13 +83,15 @@ function CertificatesPage() {
                   >
                     View <ArrowUpRight size={14} />
                   </button>
-                  <a
-                    href={c.fileUrl}
-                    download
-                    className="link-arrow text-sm"
-                  >
-                    Download <Download size={14} />
-                  </a>
+                  {c.fileUrl && !c.pendingUpload && (
+                    <a
+                      href={c.fileUrl}
+                      download
+                      className="link-arrow text-sm"
+                    >
+                      Download <Download size={14} />
+                    </a>
+                  )}
                 </div>
               </div>
             </article>

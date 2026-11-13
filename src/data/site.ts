@@ -101,14 +101,12 @@ export const compactProjects: Project[] = [
     description:
       "Real-time facial emotion detection paired with Spotify recommendations.",
     tech: ["Python", "Computer Vision", "Spotify API"],
-    github: "https://github.com/Ellarh101",
     accentLabel: "Computer Vision",
   },
   {
     title: "Customer Churn Prediction",
     description: "End-to-end machine learning pipeline with MLOps tooling.",
     tech: ["Python", "Machine Learning", "MLOps"],
-    github: "https://github.com/Ellarh101",
     accentLabel: "MLOps",
   },
 ];
@@ -343,7 +341,7 @@ export const certifications: Certification[] = [
   {
     title: "AI Capabilities and Limitations",
     issuer: "Anthropic",
-    kind: "pdf',
+    kind: "pdf",
     pendingUpload: true,
   },
 ];
