@@ -1,7 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight, ArrowLeft, Download } from "lucide-react";
 import { useState } from "react";
-import { certifications, profile, mailtoHref, type Certification } from "@/data/site";
+import { Button } from "@/components/ui/button";
+import { ContactFormDialog } from "@/components/ContactFormDialog";
+import { certifications, profile, type Certification } from "@/data/site";
 import { CertificateViewer } from "@/components/CertificateViewer";
 import { Reveal } from "@/components/Reveal";
 
@@ -94,12 +96,11 @@ function CertificatesPage() {
           <p className="text-sm text-muted-foreground">
             More certificates and video walkthroughs can be added to this archive — send
             the files to{" "}
-            <a
-              href={mailtoHref}
-              className="text-gold-soft hover:opacity-80"
-            >
-              {profile.email}
-            </a>
+            <ContactFormDialog>
+              <Button variant="link" className="h-auto p-0 text-gold-soft">
+                {profile.email}
+              </Button>
+            </ContactFormDialog>
             .
           </p>
         </div>
