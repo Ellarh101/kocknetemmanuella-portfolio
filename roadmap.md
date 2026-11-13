@@ -1,0 +1,4 @@
+- [x] Update hero, about, AFIT education, and contact copy.
+- [x] Add FlyRank AI internship and TS Academy training entries while retaining both NCAIR entries.
+- [x] Replace portfolio email links with one form that opens a prefilled email draft.
+- [ ] Verify all updated content, contact handoff, and clean preview status.
