@@ -56,11 +56,6 @@ export function Hero() {
           {summary}
         </p>
 
-        <p className="mt-5 inline-flex max-w-xl items-start gap-2 rounded-md border border-primary/40 bg-primary/10 px-3 py-2 text-sm leading-relaxed text-foreground/90">
-          <span aria-hidden className="mt-1.5 size-2 shrink-0 rounded-full bg-primary" />
-          Incoming NYSC corps member, open to PPA placement in Port Harcourt
-        </p>
-
         <ul
           className="mt-7 flex animate-fade-in flex-wrap gap-2"
           style={{ animationDelay: "300ms", animationFillMode: "backwards" }}
