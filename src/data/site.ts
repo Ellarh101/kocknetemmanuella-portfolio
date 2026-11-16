@@ -315,14 +315,18 @@ export const certifications: Certification[] = [
   {
     title: "Embedded Systems",
     issuer: "NITDA / NCAIR",
-    kind: "pdf",
-    pendingUpload: true,
+    date: "Aug–Sep 2025",
+    fileUrl: "/certificates/embedded-systems.jpg",
+    previewUrl: "/certificates/embedded-systems.jpg",
+    kind: "image",
   },
   {
     title: "AI Fluency for Small Businesses",
     issuer: "Anthropic",
+    date: "Oct 2026",
+    fileUrl: "/certificates/ai-fluency-for-small-businesses.pdf",
+    previewUrl: "/certificates/previews/ai-fluency-for-small-businesses.jpg",
     kind: "pdf",
-    pendingUpload: true,
   },
   {
     title: "Claude 101",
