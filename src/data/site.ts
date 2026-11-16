@@ -1,3 +1,5 @@
+import postaraDashboard from "@/assets/postara-dashboard.png.asset.json";
+
 export const profile = {
   name: "Kocknet Emmanuella",
   role: "Machine Learning Engineer",
@@ -44,6 +46,8 @@ export const projects: Project[] = [
     linkPlaceholder: "GitHub link coming soon",
     meta: "v1.10.0 · Nov 2026",
     accentLabel: "WhatsApp Automation",
+    image: postaraDashboard.url,
+    imageAlt: "Postara WhatsApp posting dashboard showing posting status and setup steps",
   },
   {
     title: "Aircraft Engine Remaining Useful Life Prediction",
