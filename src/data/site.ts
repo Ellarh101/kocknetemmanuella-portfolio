@@ -327,14 +327,18 @@ export const certifications: Certification[] = [
   {
     title: "Claude 101",
     issuer: "Anthropic",
+    date: "Oct 2026",
+    fileUrl: "/certificates/claude-101.pdf",
+    previewUrl: "/certificates/previews/claude-101.jpg",
     kind: "pdf",
-    pendingUpload: true,
   },
   {
     title: "Claude Code 101",
     issuer: "Anthropic",
+    date: "Nov 2026",
+    fileUrl: "/certificates/claude-code-101.pdf",
+    previewUrl: "/certificates/previews/claude-code-101.jpg",
     kind: "pdf",
-    pendingUpload: true,
   },
   {
     title: "Introduction to Claude Cowork",
@@ -345,8 +349,10 @@ export const certifications: Certification[] = [
   {
     title: "AI Capabilities and Limitations",
     issuer: "Anthropic",
+    date: "Oct 2026",
+    fileUrl: "/certificates/ai-capabilities-and-limitations.pdf",
+    previewUrl: "/certificates/previews/ai-capabilities-and-limitations.jpg",
     kind: "pdf",
-    pendingUpload: true,
   },
 ];
 
