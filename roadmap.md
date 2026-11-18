@@ -9,3 +9,4 @@
 - [x] Verify updated sections, certificate interactions, asset responses, and browser errors.
 - [x] Replace the Postara project screenshot with the latest dashboard image.
 - [x] Add Claude Code in Action and Introduction to Claude Cowork certificates with previews.
+- [ ] Replace the homepage certificate list with an animated swipeable stack and add restrained portfolio glows.
