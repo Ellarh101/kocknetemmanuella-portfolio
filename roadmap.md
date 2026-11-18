@@ -7,3 +7,5 @@
 - [x] Add six certificate placeholders that open an upload-pending view.
 - [x] Replace the CV and verify view/download URLs.
 - [x] Verify updated sections, certificate interactions, asset responses, and browser errors.
+- [x] Replace the Postara project screenshot with the latest dashboard image.
+- [x] Add Claude Code in Action and Introduction to Claude Cowork certificates with previews.

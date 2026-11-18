@@ -1,4 +1,4 @@
-import postaraDashboard from "@/assets/postara-dashboard.png.asset.json";
+import postaraDashboard from "@/assets/postara-dashboard-latest.png.asset.json";
 
 export const profile = {
   name: "Kocknet Emmanuella",
@@ -47,7 +47,7 @@ export const projects: Project[] = [
     meta: "v1.10.0 · Nov 2026",
     accentLabel: "WhatsApp Automation",
     image: postaraDashboard.url,
-    imageAlt: "Postara WhatsApp posting dashboard showing posting status and setup steps",
+    imageAlt: "Postara WhatsApp posting dashboard showing today's post status and setup steps",
   },
   {
     title: "Aircraft Engine Remaining Useful Life Prediction",
@@ -345,10 +345,20 @@ export const certifications: Certification[] = [
     kind: "pdf",
   },
   {
+    title: "Claude Code in Action",
+    issuer: "Anthropic",
+    date: "Nov 2026",
+    fileUrl: "/certificates/claude-code-in-action.pdf",
+    previewUrl: "/certificates/previews/claude-code-in-action.jpg",
+    kind: "pdf",
+  },
+  {
     title: "Introduction to Claude Cowork",
     issuer: "Anthropic",
+    date: "Oct 2026",
+    fileUrl: "/certificates/introduction-to-claude-cowork.pdf",
+    previewUrl: "/certificates/previews/introduction-to-claude-cowork.jpg",
     kind: "pdf",
-    pendingUpload: true,
   },
   {
     title: "AI Capabilities and Limitations",
