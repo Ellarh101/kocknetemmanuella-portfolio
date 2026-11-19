@@ -3,7 +3,7 @@ import { Reveal } from "./Reveal";
 
 export function Skills() {
   return (
-    <section id="skills" className="relative py-16 sm:py-24">
+    <section id="skills" className="ambient-section relative py-16 sm:py-24">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <Reveal>
           <p className="eyebrow">Toolkit</p>

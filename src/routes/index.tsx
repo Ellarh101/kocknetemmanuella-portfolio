@@ -82,7 +82,7 @@ function Index() {
 
         <Skills />
 
-        <section id="experience" className="py-16 sm:py-24">
+        <section id="experience" className="ambient-section relative overflow-hidden py-16 sm:py-24">
           <div className="mx-auto max-w-6xl px-5 sm:px-8">
             <Reveal>
               <p className="eyebrow">Background</p>
